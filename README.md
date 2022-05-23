@@ -16,7 +16,7 @@ Table of contents
   * [Configuration](#configuration)
   * [Execution](#execution)
   * [Examples](#examples)
-  * [Results and benchmarking](#results)
+  * [Results and benchmarking](#resultsandbenchmarking)
   * [Tips & FAQs](#tips)
 
 
