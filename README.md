@@ -72,7 +72,7 @@ The usage of this workflow is described in the [Snakemake Workflow Catalog](http
     * reference - name of the target reference genome along with index .fai file from workflow/resources/ folder (e.g. resources/2. PlasmoDB-46_Pfalciparum3D7_Genome.fasta)
     * bed - bed coordinate files for region of interest
     * data - file path to folder that contains fastq files (e.g. desktop/fastq)
-    * ont_chemistry - the chemistry of flowcell used for sequencing (default is R9 flowcell that is *ont_r9_guppy5_sup*, other options include *ont_r10_q20* for R10 chemistry or *hifi* (for Hifi). 
+    * ont_chemistry - the chemistry of flowcell used for sequencing (default is R9 flowcell that is **ont_r9_guppy5_sup**, other options include **ont_r10_q20** for R10 chemistry or **hifi** (for Hifi). 
     * min_coverage: minimum coverage used for variant calling
     * max_coverage: maximum coverage used for variant calling
     * min_alt_frac: specification of a potential SNV (or minor clones in the case of malaria multiclonal infection) to have at least this fraction of alternate allele observations
