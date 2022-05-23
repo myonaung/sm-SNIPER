@@ -81,26 +81,33 @@ The usage of this workflow is described in the [Snakemake Workflow Catalog](http
 ### Execution
 
 #### 1. Install and activate conda environment
-It is recommended to execute always from within top level of the pipeline directory (i.e sm-SNIPER/). Firstly, conda environment that includes all the core software has to be created (one-time commands). It might take several minutes.
+It is recommended to execute always from within top level of the pipeline directory (i.e sm-SNIPER/). Firstly, conda environment that includes all the core software has to be installed upon the first run of the workflow. It might take several minutes.
 
 ```
 ###envname can be replaced by any name
 conda env create --name envname --file=workflow/envs/default.yml
 conda activate envname
 ```
+#### 2. Download singularity image
+Singularity image for PEPPER variant calling step has to be downloaded, and placed it under workflow/envs folder.
 
-#### 2. Execute a dry-run
+```
+cd sm-SNIPER
+singularity pull docker://kishwars/pepper_deepvariant:r0.7
+mv pepper_deepvariant_r0.7.sif workflow/envs
+```
+#### 3. Execute a dry-run
 Checking the pipeline with dry-run options. It is to print print a summary of the DAG of jobs
 ```
 snakemake -p -n
 ```
-#### 3. Execute workflow local
+#### 4. Execute workflow local
 Command for execution with two cores
 ```
 snakemake -p -c2 -k
 ```
 
-#### 4. Execute workflow on a cluster
+#### 5. Execute workflow on a cluster
 
 ## Examples
 To ensure reproducibility of results and to make the pipeline easy-to-replicate, we provide all required reference data for the analysis on Zendodo: 
