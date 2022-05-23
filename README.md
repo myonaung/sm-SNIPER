@@ -109,6 +109,8 @@ snakemake -p -c2 -k
 ```
 
 #### 5. Execute workflow on a cluster
+##### Slurm system
+##### PBS system
 
 ## Examples
 To ensure reproducibility of results and to make the pipeline easy-to-replicate, we provide all required reference data for the analysis on Zendodo: 
