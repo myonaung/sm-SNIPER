@@ -70,22 +70,22 @@ The usage of this workflow is described in the [Snakemake Workflow Catalog](http
 2. Clone/download this repository (e.g. git clone https://github.com/myonaung/sm-SNIPER.git)
 ## Configuration
 ### Sample annotation specifications
-* Input (FastQ) files must be annotated with sample name, and thus (sample_name).fastq.
-* Based on the analyses, the following parameters in the **workflow/config/config.yaml file** and resource files in **workflow/resources/** are to be adjusted 
+* `Input (FastQ)` files must be annotated with sample name, and thus `(sample_name).fastq`.
+* Based on the analyses, the following parameters in the `workflow/config/config.yaml file` and resource files in `workflow/resources/` are to be adjusted 
 
-    * reference - name of the target reference genome along with index .fai file from workflow/resources/ folder (e.g. resources/2. PlasmoDB-46_Pfalciparum3D7_Genome.fasta)
-    * bed - bed coordinate files for region of interest
-    * data - file path to folder that contains fastq files (e.g. desktop/fastq)
-    * ont_chemistry - the chemistry of flowcell used for sequencing (default is R9 flowcell that is **ont_r9_guppy5_sup**, other options include **ont_r10_q20** for R10 chemistry or **hifi** (for Hifi). 
-    * min_coverage: minimum coverage used for variant calling
-    * max_coverage: maximum coverage used for variant calling
-    * min_alt_frac: specification of a potential SNV (or minor clones in the case of malaria multiclonal infection) to have at least this fraction of alternate allele observations
+    * `reference` - name of the target reference genome along with index .fai file from workflow/resources/ folder (e.g. resources/2. PlasmoDB-46_Pfalciparum3D7_Genome.fasta)
+    * `bed` - bed coordinate files for region of interest
+    * `data` - file path to folder that contains fastq files (e.g. desktop/fastq)
+    * `ont_chemistry` - the chemistry of flowcell used for sequencing (default is R9 flowcell that is `ont_r9_guppy5_sup`, other options include `ont_r10_q20` for R10 chemistry or `hifi` (for Hifi). 
+    * `min_coverage`: minimum coverage used for variant calling
+    * `max_coverage`: maximum coverage used for variant calling
+    * `min_alt_frac`: specification of a potential SNV (or minor clones in the case of malaria multiclonal infection) to have at least this fraction of alternate allele observations
 
 
 ### Execution
 
 #### 1. Install and activate conda environment
-It is recommended to execute always from within top level of the pipeline directory (i.e sm-SNIPER/). Firstly, conda environment that includes all the core software has to be installed upon the first run of the workflow. It might take several minutes.
+It is recommended to execute always from within top level of the pipeline directory (i.e `sm-SNIPER/`). Firstly, conda environment that includes all the core software has to be installed upon the first run of the workflow. It might take several minutes.
 
 ```
 ###envname can be replaced by any name
@@ -93,7 +93,7 @@ conda env create --name envname --file=workflow/envs/default.yml
 conda activate envname
 ```
 #### 2. Download singularity image
-Singularity image for PEPPER variant calling step has to be downloaded, and placed it under workflow/envs folder.
+Singularity image for PEPPER variant calling step has to be downloaded, and placed it under `workflow/envs` folder.
 
 ```
 cd sm-SNIPER
@@ -126,8 +126,8 @@ To ensure reproducibility of results and to make the pipeline easy-to-replicate,
 ## Benchmarking
 ## Tips
 Here are some tips for troubleshooting & FAQs:
-- always first perform a dry-run with option -n
-- always run the pipeline with -k options to complete independent steps if an upstream step fails
+- always first perform a dry-run with option `-n`
+- always run the pipeline with `-k` options to complete independent steps if an upstream step fails
 - in case the pipeline crashes, manually cancel the pipeline as follow
 ```
 snakemake --unlock 
@@ -138,4 +138,4 @@ snakemake -k -c8 --rerun-incomplete
 snakemake --dag --forceall | dot -Tsvg > workflow/dags/all_DAG.svg
 ```
 ## Contact
-Please create issue [here](https://github.com/myonaung/sm-SNIPER/issues/new) for any problem developed from using sm-SNIPER.
+Please create issue [here](https://github.com/myonaung/sm-SNIPER/issues/new) for any problem developed from using `sm-SNIPER`.
