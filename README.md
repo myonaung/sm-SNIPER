@@ -84,7 +84,7 @@ The usage of this workflow is described in the [Snakemake Workflow Catalog](http
 It is recommended to execute always from within top level of the pipeline directory (i.e sm-SNIPER/). Firstly, conda environment that includes all the core software has to be created (one-time commands). It might take several minutes.
 
 ```
-#envname can be replaced by any name
+###envname can be replaced by any name
 conda env create --name envname --file=workflow/envs/default.yml
 conda activate envname
 ```
