@@ -1,4 +1,66 @@
-# Main entrypoint of the workflow. 
-# Please follow the best practices: 
-# https://snakemake.readthedocs.io/en/stable/snakefiles/best_practices.html,
-# in particular regarding the standardized folder structure mentioned there. 
+## The snakemake pipeline sm-SNIPER that does long-read amplicon-seq variant calling ##
+
+###########################################################
+#### Author: Myo T. Naung (naung.m@wehi.edu.au)############
+#### SNIPER version 1.0                      ############
+#### Copyright (C) 2022 onwards Myo T. Naung   ############
+###########################################################
+
+from snakemake.utils import min_version
+##### set minimum snakemake version #####
+min_version("6.4.1")
+
+import glob
+import pandas as pd
+
+configfile:
+    "config/config.yaml"
+
+SAMPLE, = glob_wildcards(config['data']+"/{id}.fastq").id
+
+
+
+#########################################
+#### Main Recepie #####
+#########################################
+
+rule SNIPER:
+    input:
+        bam_sorted=expand("results/bam/{SAMPLE}.fastq_sorted.minimap2.bam",SAMPLE=SAMPLE),
+        total_depth=expand("results/{SAMPLE}/out/QC/{SAMPLE}_amplicon_total_depth.txt",SAMPLE=SAMPLE),
+        amplicon_depth=expand("results/{SAMPLE}/out/QC/{SAMPLE}_amplicon_depth.txt",SAMPLE=SAMPLE),
+        mapping_summary=expand("results/{SAMPLE}/out/QC/{SAMPLE}_mapping_summary.txt",SAMPLE=SAMPLE),
+        sample_mean_depth=expand("results/{SAMPLE}/out/QC/{SAMPLE}_mean_depth.txt",SAMPLE=SAMPLE),
+        longshot_amplicon=expand("results/{SAMPLE}/out/{SAMPLE}_amplicon.vcf", SAMPLE=SAMPLE),
+        RG_bam_sorted=expand("results/{SAMPLE}/out/{SAMPLE}_RG_sorted.bam", SAMPLE=SAMPLE),
+        #OUTPUT_VCF=expand("results/PEPPER/{SAMPLE}/PEPPER_HP_VARIANT_FULL.vcf.gz", SAMPLE=SAMPLE),
+        PEPPER_amplicon=expand("results/{SAMPLE}/out/{SAMPLE}_PEPPER_VARIANT_FULL.vcf",SAMPLE=SAMPLE),
+        confident_snv_index=expand("results/{SAMPLE}/out/confident_snv/{SAMPLE}_confident_snps.vcf.gz",SAMPLE=SAMPLE),
+        longshot_table=expand("results/{SAMPLE}/out/tabular/{SAMPLE}_longshot_amplicon.txt",SAMPLE=SAMPLE),
+        PEPPER_table=expand("results/{SAMPLE}/out/tabular/{SAMPLE}_PEPPER_amplicon.txt",SAMPLE=SAMPLE),
+        longshot_table_f=expand("results/{SAMPLE}/out/text_file/{SAMPLE}_longshot.txt",SAMPLE=SAMPLE),
+        PEPPER_table_f=expand("results/{SAMPLE}/out/text_file/{SAMPLE}_PEPPER.txt",SAMPLE=SAMPLE),
+        unique_out_path=expand("results/{SAMPLE}/out/snps_to_evaluate/",SAMPLE=SAMPLE),
+        unique_out=expand("results/{SAMPLE}/out/snps_to_evaluate/{SAMPLE}_merged.txt",SAMPLE=SAMPLE),
+        longshot_pass=expand("results/{SAMPLE}/out/snps_to_evaluate/longshot_pass/{SAMPLE}_longshot_pass.txt",SAMPLE=SAMPLE),
+        pepper_pass=expand("results/{SAMPLE}/out/snps_to_evaluate/pepper_pass/{SAMPLE}_pepper_pass.txt",SAMPLE=SAMPLE),
+        longshot_pass_sites=expand("results/{SAMPLE}/out/snps_to_evaluate/longshot_pass/{SAMPLE}_longshot_svm_pass_sites",SAMPLE=SAMPLE),
+        pepper_pass_sites=expand("results/{SAMPLE}/out/snps_to_evaluate/pepper_pass/{SAMPLE}_pepper_svm_pass_sites",SAMPLE=SAMPLE),
+        longshot_SVM_pass=expand("results/{SAMPLE}/out/{SAMPLE}_longshot_SVM_pass.vcf",SAMPLE=SAMPLE),
+        index_longshot_SVM_pass=expand("results/{SAMPLE}/out/{SAMPLE}_longshot_SVM_pass.vcf.gz",SAMPLE=SAMPLE),
+        final_longshot=expand("results/{SAMPLE}/out/{SAMPLE}_final_longshot.vcf",SAMPLE=SAMPLE),
+        final_longshot_index=expand("results/{SAMPLE}/out/{SAMPLE}_final_longshot.vcf.gz",SAMPLE=SAMPLE),
+        pepper_SVM_pass=expand("results/{SAMPLE}/out/{SAMPLE}_PEPPER_SVM_pass.vcf",SAMPLE=SAMPLE),
+        pepper_to_longshot_index=expand("results/{SAMPLE}/out/{SAMPLE}_pepper_to_longshot.vcf.gz",SAMPLE=SAMPLE),
+        final_variants=expand("results/{SAMPLE}/out/final_vcf_SNIPER/{SAMPLE}_final_SNIPER.vcf",SAMPLE=SAMPLE),
+
+
+##### Modules #####
+
+include: "rules/mapping.smk"
+include: "rules/QC.smk"
+include: "rules/longshot_variant_calling.smk"
+#include: "rules/singularity.smk"
+include: "rules/managing_callsets.smk"
+include: "rules/unique_snvs.smk"
+include: "rules/SVM_final_callset.smk"

@@ -1,0 +1,8 @@
+reference: resources/PlasmoDB-46_Pfalciparum3D7_Genome.fasta
+bed: resources/myo_panel_bed.bed
+data: /data/cephfs/punim1129/probe-cap_seq_data/sm-SNIPER/fastq
+ont_chemistry: ont_r9_guppy5_sup #others: ont_r9_guppy5_sup (R9- default) or ont_r10_q20 (for R10) or hifi (for Hifi)
+min_coverage: 5
+max_coverage: 5000
+min_alt_frac: 0.01 #Require a potential SNV to have at least this fraction of alternate allele observations
+
