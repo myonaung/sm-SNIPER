@@ -69,13 +69,13 @@ The usage of this workflow is described in the [Snakemake Workflow Catalog](http
 * Sample (FastQ) files must be annotated with sample name, and thus (sample_name).fastq.
 * Based on the analyses, the following parameters in the **workflow/config/config.yaml file** and resource files in **workflow/resources/** are to be adjusted 
 
-    1. reference - name of the target reference genome along with index .fai file from workflow/resources/ folder (e.g. resources/2. PlasmoDB-46_Pfalciparum3D7_Genome.fasta)
-    2. bed - bed coordinate files for region of interest
-    3. data - file path to folder that contains fastq files (e.g. desktop/fastq)
-    4. ont_chemistry - the chemistry of flowcell used for sequencing (default is R9 flowcell that is *ont_r9_guppy5_sup*, other options include *ont_r10_q20* for R10 chemistry or *hifi* (for Hifi). 
-    5. min_coverage: minimum coverage used for variant calling
-    6. max_coverage: maximum coverage used for variant calling
-    7. min_alt_frac: specification of a potential SNV (or minor clones in the case of malaria multiclonal infection) to have at least this fraction of alternate allele observations
+    * reference - name of the target reference genome along with index .fai file from workflow/resources/ folder (e.g. resources/2. PlasmoDB-46_Pfalciparum3D7_Genome.fasta)
+    * bed - bed coordinate files for region of interest
+    * data - file path to folder that contains fastq files (e.g. desktop/fastq)
+    * ont_chemistry - the chemistry of flowcell used for sequencing (default is R9 flowcell that is *ont_r9_guppy5_sup*, other options include *ont_r10_q20* for R10 chemistry or *hifi* (for Hifi). 
+    * min_coverage: minimum coverage used for variant calling
+    * max_coverage: maximum coverage used for variant calling
+    * min_alt_frac: specification of a potential SNV (or minor clones in the case of malaria multiclonal infection) to have at least this fraction of alternate allele observations
 
 
 ### Execution
