@@ -27,7 +27,8 @@ Table of contents
 ## Authors
 - [Myo T. Naung](https://github.com/myonaung)
 - [Andrew Guy](https://github.com/andrewguy)
--  Somesh Mehra
+- [Swapnil Tichkule](https://github.com/Swap90)
+- Somesh Mehra
 
 ## Software
 This project is written based on the following software
