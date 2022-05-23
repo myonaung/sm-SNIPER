@@ -80,6 +80,8 @@ snakemake -p -n
 #### 4. Execute workflow on a cluster
 
 ## Examples
+To ensure reproducibility of results and to make the pipeline easy-to-replicate, we provide all required reference data for the analysis on Zendodo: 
+
 ## Results
 ## Tips
 Here are some tips for troubleshooting & FAQs:
