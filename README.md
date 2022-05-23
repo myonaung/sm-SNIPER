@@ -50,8 +50,8 @@ The following software are required to install prior to running sm-SNIPER
 ## Features
 - Mapping to the reference genome
 - Quality control: Read-depth and coverage calculation
-- Variant calling via longshot
-- Variant calling via PEPPER
+- Variant calling via [longshot](https://github.com/pjedge/longshot)
+- Variant calling via [PEPPER](https://github.com/kishwarshafin/pepper)
 - Merging SVNs supported by both callers
 - Support Vector Machine
 - Final variant call
