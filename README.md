@@ -82,3 +82,6 @@ snakemake -p -n
 ## Examples
 ## Results
 ## Tips
+Here are some tips for troubleshooting & FAQs:
+- always first perform a dry-run with option -n
+- always run the pipeline with -k options to complete independent steps if an upstream step fails
