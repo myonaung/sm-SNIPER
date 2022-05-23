@@ -8,6 +8,11 @@ A Snakemake workflow for **Highly accurate Single Nucleotide polymorphisms calli
 
 ## Software
 
+## Dependencies 
+
+#### Conda
+#### Singularity >= 3.8.5
+
 ## Features
 
 ## Usage
@@ -19,7 +24,7 @@ The usage of this workflow is described in the [Snakemake Workflow Catalog](http
 ### Execution
 
 #### 1. Install and activate conda environment
-It is recommended to execute always from within top level of the pipeline directory (ie sm-SNIPER/)
+It is recommended to execute always from within top level of the pipeline directory (i.e sm-SNIPER/)
 #### 2. Execute a dry-run
 #### 3. Execute workflow local
 #### 4. Execute workflow on a cluster
