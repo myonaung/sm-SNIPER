@@ -65,6 +65,8 @@ The usage of this workflow is described in the [Snakemake Workflow Catalog](http
 1. Install snakemake, which requires conda & mamba, according to the [documentation](https://snakemake.readthedocs.io/en/stable/getting_started/installation.html)
 2. Clone/download this repository (e.g. git clone https://github.com/myonaung/sm-SNIPER.git)
 ## Configuration
+1. Sample annotation specifications
+
 
 ### Execution
 
