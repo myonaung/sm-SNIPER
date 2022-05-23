@@ -74,13 +74,13 @@ The usage of this workflow is described in the [Snakemake Workflow Catalog](http
 * `Input (FastQ)` files must be annotated with sample name, and thus `(sample_name).fastq`.
 * Based on the analyses, the following parameters in the `workflow/config/config.yaml` file and resource files in `workflow/resources/` are to be adjusted 
 
-    * `reference` - name of the target reference genome along with index .fai file from workflow/resources/ folder (e.g. resources/2. PlasmoDB-46_Pfalciparum3D7_Genome.fasta)
-    * `bed` - bed coordinate files for region of interest
-    * `data` - file path to folder that contains fastq files (e.g. desktop/fastq)
-    * `ont_chemistry` - the chemistry of flowcell used for sequencing (default is R9 flowcell that is `ont_r9_guppy5_sup`, other options include `ont_r10_q20` for R10 chemistry or `hifi` (for Hifi). 
-    * `min_coverage`: minimum coverage used for variant calling
-    * `max_coverage`: maximum coverage used for variant calling
-    * `min_alt_frac`: specification of a potential SNV (or minor clones in the case of malaria multiclonal infection) to have at least this fraction of alternate allele observations
+- `reference` - name of the target reference genome along with index .fai file from workflow/resources/ folder (e.g. resources/2. PlasmoDB-46_Pfalciparum3D7_Genome.fasta)
+- `bed` - bed coordinate files for region of interest
+- `data` - file path to folder that contains fastq files (e.g. desktop/fastq)
+- `ont_chemistry` - the chemistry of flowcell used for sequencing (default is R9 flowcell that is `ont_r9_guppy5_sup`, other options include `ont_r10_q20` for R10 chemistry or `hifi` (for Hifi). 
+- `min_coverage`: minimum coverage used for variant calling
+- `max_coverage`: maximum coverage used for variant calling
+- `min_alt_frac`: specification of a potential SNV (or minor clones in the case of malaria multiclonal infection) to have at least this fraction of alternate allele observations
 * Based on nature of data to be analysed, it is recommended to change `svm_training_longshot.txt` and `svm_training_pepper.txt` from `workflow/resources/` folder. However, in the absence of reference dataset, the `training dataset` from  `workflow/resources/` should suffice.
 * Failed log from downstream `PEPPER` variant calling steps are to be ignored at the moment since they are not relying for the pipeline.
 
