@@ -16,7 +16,8 @@ Table of contents
   * [Configuration](#configuration)
   * [Execution](#execution)
   * [Examples](#examples)
-  * [Results and benchmarking](#resultsandbenchmarking)
+  * [Results](#results)
+  * [Benchmarking](#benchmarking)
   * [Tips & FAQs](#tips)
 
 
@@ -114,7 +115,8 @@ To ensure reproducibility of results and to make the pipeline easy-to-replicate,
 - [nanopore amplicon-seq FastQ file from clinical samples](https://zenodo.org/deposit/6571220)
 - [nanopore simulated FastQ](https://zenodo.org/deposit/6571220)
 
-## Results and benchmarking
+## Results  
+## Benchmarking
 ## Tips
 Here are some tips for troubleshooting & FAQs:
 - always first perform a dry-run with option -n
