@@ -26,7 +26,7 @@ The usage of this workflow is described in the [Snakemake Workflow Catalog](http
 #### 1. Install and activate conda environment
 It is recommended to execute always from within top level of the pipeline directory (i.e sm-SNIPER/)
 #### 2. Execute a dry-run
-    
+Checking the pipeline with dry-run options. It is to print print a summary of the DAG of jobs
 ```
 snakemake -p -n
 ```
