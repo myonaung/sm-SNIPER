@@ -23,6 +23,7 @@ Table of contents
 
 ## Authors
 - [Myo T. Naung](https://github.com/myonaung)
+- [Andrew Guy](https://github.com/andrewguy)
 
 ## Software
 This project is written based on the following software
