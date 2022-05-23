@@ -56,9 +56,9 @@ The following software are required to install prior to running sm-SNIPER
 - Mapping to the reference genome
 - Quality control: Read-depth and coverage calculation
 - Variant calling with [longshot](https://github.com/pjedge/longshot)
-- Variant calling with [PEPPER](https://github.com/kishwarshafin/pepper)
+- Variant calling with [PEPPER](https://github.com/kishwarshafin/pepper) which is run on singularity container
 - Merging SVNs supported by both callers
-- Support Vector Machine
+- Support Vector Machine based on in-house database (it is genereated by sequencing of reference strains using [STAR-seq protocol](https://www.protocols.io/private/ACE2C16BC17D11EC94CE0A58A9FEAC02))
 - Final variant call
 - Generation of only primary alignment BAM files
 
@@ -81,6 +81,7 @@ The usage of this workflow is described in the [Snakemake Workflow Catalog](http
     * `min_coverage`: minimum coverage used for variant calling
     * `max_coverage`: maximum coverage used for variant calling
     * `min_alt_frac`: specification of a potential SNV (or minor clones in the case of malaria multiclonal infection) to have at least this fraction of alternate allele observations
+* Based on nature of data to be analysed, it is recommended to change `svm_training_longshot.txt` and `svm_training_pepper.txt` from `workflow/resources/` folder. However, in the absence of reference dataset, the `training dataset` from  `workflow/resources/` should suffice.
 * Failed log from downstream `PEPPER` variant calling steps are to be ignored at the moment since they are not relying for the pipeline.
 
 
