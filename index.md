@@ -1,37 +1,144 @@
-## Welcome to GitHub Pages
+# `sm-SNIPER`
 
-You can use the [editor on GitHub](https://github.com/myonaung/sm-SNIPER/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+![Snakemake](https://img.shields.io/badge/snakemake-≥6.3.0-brightgreen.svg)
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+A Snakemake workflow for **Highly accurate Single Nucleotide polymorphisms calling and Implication of haplotypes in Probe-capture based long-Read Nanopore sequencing** from raw FastQ to VCF
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Table of contents
+----------------
+  * [Authors](#authors)
+  * [Software](#software)
+  * [Methods](#dependencies)
+  * [Features](#features)
+  * [Usage](#usage)
+  * [Installation](#installation)
+  * [Configuration](#configuration)
+  * [Execution](#execution)
+  * [Examples](#examples)
+  * [Results](#results)
+  * [Benchmarking](#benchmarking)
+  * [Tips & FAQs](#tips)
+  * [Contact](#contact)
 
-```markdown
-Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
+## Authors
+- [Myo T. Naung](https://github.com/myonaung)
+- [Andrew Guy](https://github.com/andrewguy)
+-  Somesh Mehra
 
-1. Numbered
-2. List
+## Software
+This project is written based on the following software
 
-**Bold** and _Italic_ and `Code` text
+| Software       | Reference (DOI)                                   |
+| :------------: | :-----------------------------------------------: |
+| BCFtools       | https://doi.org/10.1093/gigascience/giab008       |
+| bedtools       | https://doi.org/10.1093/bioinformatics/btq033     |
+| GATK-4         | https://doi.org/10.1038/ng.806                    |
+| longshot       | https://doi.org/10.1038/s41467-019-12493-y        |
+| minimap2       | https://doi:10.1093/bioinformatics/btab705        |
+| NanoSim        | https://doi.org/10.1093/gigascience/gix010        |
+| PEPPER         | https://doi.org/10.5281/zenodo.5275510            |
+| R-tidyverse    | https://doi.org/10.21105/joss.01686               |
+| samtools       | https://doi.org/10.1093/bioinformatics/btp352     |
+| Snakemake      | https://doi.org/10.12688/f1000research.29032.2    |
+| VCFtools       | https://doi.org/10.1093/bioinformatics/btr330     |
 
-[Link](url) and ![Image](src)
+
+## Dependencies 
+The following software are required to install prior to running sm-SNIPER
+* Conda
+* Singularity >= 3.8.5 
+* graphviz (optional)
+
+## Features
+- Mapping to the reference genome
+- Quality control: Read-depth and coverage calculation
+- Variant calling with [longshot](https://github.com/pjedge/longshot)
+- Variant calling with [PEPPER](https://github.com/kishwarshafin/pepper) which is run on singularity container
+- Merging SVNs supported by both callers
+- Classification of variants (SVNs) by Support Vector Machine based on in-house reference database (it is genereated by sequencing of reference strains using [STAR-seq protocol](https://www.protocols.io/private/ACE2C16BC17D11EC94CE0A58A9FEAC02))
+- Final variant call
+- Generation of only primary alignment BAM files
+
+## Usage
+
+The usage of this workflow is described in the [Snakemake Workflow Catalog](https://snakemake.github.io/snakemake-workflow-catalog/?usage=<owner>%2F<repo>).
+
+## Installation
+1. Install snakemake, which requires conda & mamba, according to the [documentation](https://snakemake.readthedocs.io/en/stable/getting_started/installation.html)
+2. Clone/download this repository (e.g. git clone https://github.com/myonaung/sm-SNIPER.git)
+## Configuration
+### Sample annotation specifications
+* `Input (FastQ)` files must be annotated with sample name, and thus `(sample_name).fastq`.
+* Based on the analyses, the following parameters in the `workflow/config/config.yaml` file and resource files in `workflow/resources/` are to be adjusted 
+
+    * `reference` - name of the target reference genome along with index .fai file from workflow/resources/ folder (e.g. resources/2. PlasmoDB-46_Pfalciparum3D7_Genome.fasta)
+    * `bed` - bed coordinate files for region of interest
+    * `data` - file path to folder that contains fastq files (e.g. desktop/fastq)
+    * `ont_chemistry` - the chemistry of flowcell used for sequencing (default is R9 flowcell that is `ont_r9_guppy5_sup`, other options include `ont_r10_q20` for R10 chemistry or `hifi` (for Hifi). 
+    * `min_coverage`: minimum coverage used for variant calling
+    * `max_coverage`: maximum coverage used for variant calling
+    * `min_alt_frac`: specification of a potential SNV (or minor clones in the case of malaria multiclonal infection) to have at least this fraction of alternate allele observations
+* Based on nature of data to be analysed, it is recommended to change `svm_training_longshot.txt` and `svm_training_pepper.txt` from `workflow/resources/` folder. However, in the absence of reference dataset, the `training dataset` from  `workflow/resources/` should suffice.
+* Failed log from downstream `PEPPER` variant calling steps are to be ignored at the moment since they are not relying for the pipeline.
+
+
+### Execution
+
+#### 1. Install and activate conda environment
+It is recommended to execute always from within top level of the pipeline directory (i.e `sm-SNIPER/`). Firstly, conda environment that includes all the core software has to be installed upon the first run of the workflow. It might take several minutes.
+
+```
+###envname can be replaced by any name
+conda env create --name envname --file=workflow/envs/default.yml
+conda activate envname
+```
+#### 2. Download singularity image
+Singularity image for PEPPER variant calling step has to be downloaded, and placed it under `workflow/envs` folder.
+
+```
+cd sm-SNIPER
+singularity pull docker://kishwars/pepper_deepvariant:r0.7
+mv pepper_deepvariant_r0.7.sif workflow/envs
+```
+#### 3. Execute a dry-run
+Checking the pipeline with dry-run options. It is to print print a summary of the DAG of jobs
+```
+cd workflow
+snakemake -p -n
+```
+#### 4. Execute workflow local
+Command for execution with two cores
+```
+cd workflow
+snakemake -p -c2 -k
 ```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+#### 5. Execute workflow on a cluster
+#### 5a. Slurm system
+#### 5b. PBS system
 
-### Jekyll Themes
+## Examples
+To ensure reproducibility of results and to make the pipeline easy-to-replicate, we provide all required reference data for the analysis on Zendodo: 
+- [nanopore amplicon-seq FastQ file from clinical samples](https://zenodo.org/deposit/6571220)
+- [nanopore simulated FastQ](https://zenodo.org/deposit/6571220)
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/myonaung/sm-SNIPER/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+## Results  
+## Benchmarking
+## Tips
+Here are some tips for troubleshooting & FAQs:
+- always first perform a dry-run with option `-n`
+- always run the pipeline with `-k` options to complete independent steps if an upstream step fails
+- in case the pipeline crashes, manually cancel the pipeline as follow
+```
+snakemake --unlock 
+snakemake -k -c8 --rerun-incomplete
+```
+- command for generating the directed acyclic graph (DAG) of all jobs with current configuration (installation of [graphviz](https://graphviz.org/) will be required)
+```
+snakemake --dag --forceall | dot -Tsvg > workflow/dags/all_DAG.svg
+```
+## Contact
+Please create issue [here](https://github.com/myonaung/sm-SNIPER/issues/new) for any problem developed from using `sm-SNIPER`.
