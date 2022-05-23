@@ -38,6 +38,7 @@ This project is written based on the following software
 | GATK-4         | https://doi.org/10.1038/ng.806                    |
 | longshot       | https://doi.org/10.1038/s41467-019-12493-y        |
 | minimap2       | https://doi:10.1093/bioinformatics/btab705        |
+| NanoSim        | https://doi.org/10.1093/gigascience/gix010        |
 | PEPPER         | https://doi.org/10.5281/zenodo.5275510            |
 | R-tidyverse    | https://doi.org/10.21105/joss.01686               |
 | samtools       | https://doi.org/10.1093/bioinformatics/btp352     |
