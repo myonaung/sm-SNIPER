@@ -14,7 +14,7 @@ import glob
 import pandas as pd
 
 configfile:
-    "workflow/config/config.yaml"
+    "config/config.yaml"
 
 SAMPLE, = glob_wildcards(config['data']+"/{id}.fastq").id
 
