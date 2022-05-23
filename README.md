@@ -81,6 +81,7 @@ The usage of this workflow is described in the [Snakemake Workflow Catalog](http
     * `min_coverage`: minimum coverage used for variant calling
     * `max_coverage`: maximum coverage used for variant calling
     * `min_alt_frac`: specification of a potential SNV (or minor clones in the case of malaria multiclonal infection) to have at least this fraction of alternate allele observations
+* Failed log from downstream PEPPER variant calling steps are to be ignored at the moment since they are not relying for the pipeline.
 
 
 ### Execution
