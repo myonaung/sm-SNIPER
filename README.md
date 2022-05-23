@@ -89,3 +89,7 @@ To ensure reproducibility of results and to make the pipeline easy-to-replicate,
 Here are some tips for troubleshooting & FAQs:
 - always first perform a dry-run with option -n
 - always run the pipeline with -k options to complete independent steps if an upstream step fails
+- command for generating the directed acyclic graph (DAG) of all jobs with current configuration (installation of [graphviz](https://graphviz.org/) will be required)
+```
+snakemake --dag --forceall | dot -Tsvg > workflow/dags/all_DAG.svg
+```
