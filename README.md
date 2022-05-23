@@ -19,6 +19,7 @@ The usage of this workflow is described in the [Snakemake Workflow Catalog](http
 ### Execution
 
 #### 1. Install and activate conda environment
+It is recommended to execute always from within top level of the pipeline directory (ie sm-SNIPER/)
 #### 2. Execute a dry-run
 #### 3. Execute workflow local
 #### 4. Execute workflow on a cluster
