@@ -55,6 +55,7 @@ The following software are required to install prior to running sm-SNIPER
 - Merging SVNs supported by both callers
 - Support Vector Machine
 - Final variant call
+- Generation of only primary alignment BAM files
 
 ## Usage
 
