@@ -1,4 +1,4 @@
-# Snakemake workflow: `sm-SNIPER`
+# `sm-SNIPER`
 
 ![Snakemake](https://img.shields.io/badge/snakemake-≥6.3.0-brightgreen.svg)
 
