@@ -81,7 +81,13 @@ The usage of this workflow is described in the [Snakemake Workflow Catalog](http
 ### Execution
 
 #### 1. Install and activate conda environment
-It is recommended to execute always from within top level of the pipeline directory (i.e sm-SNIPER/)
+It is recommended to execute always from within top level of the pipeline directory (i.e sm-SNIPER/). Firstly, conda environment that includes all the core software has to be created (one-time commands). It might take several minutes.
+
+```
+#envname can be replaced by any name
+conda env create --name envname --file=workflow/envs/default.yml
+conda activate envname
+```
 
 #### 2. Execute a dry-run
 Checking the pipeline with dry-run options. It is to print print a summary of the DAG of jobs
