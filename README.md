@@ -48,20 +48,26 @@ The following software are required to install prior to running sm-SNIPER
 * Singularity >= 3.8.5
 
 ## Features
+- Mapping to the reference genome
+- Quality control: Read-depth and coverage calculation
+- Variant calling via longshot
+- Variant calling via PEPPER
+- 
 
 ## Usage
 
 The usage of this workflow is described in the [Snakemake Workflow Catalog](https://snakemake.github.io/snakemake-workflow-catalog/?usage=<owner>%2F<repo>).
 
 ## Installation
-1. install snakemake, which requires conda & mamba, according to the [documentation](https://snakemake.readthedocs.io/en/stable/getting_started/installation.html)
-2. clone/download this repository (e.g. git clone https://github.com/myonaung/sm-SNIPER.git)
+1. Install snakemake, which requires conda & mamba, according to the [documentation](https://snakemake.readthedocs.io/en/stable/getting_started/installation.html)
+2. Clone/download this repository (e.g. git clone https://github.com/myonaung/sm-SNIPER.git)
 ## Configuration
 
 ### Execution
 
 #### 1. Install and activate conda environment
 It is recommended to execute always from within top level of the pipeline directory (i.e sm-SNIPER/)
+
 #### 2. Execute a dry-run
 Checking the pipeline with dry-run options. It is to print print a summary of the DAG of jobs
 ```
