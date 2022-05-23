@@ -101,11 +101,13 @@ mv pepper_deepvariant_r0.7.sif workflow/envs
 #### 3. Execute a dry-run
 Checking the pipeline with dry-run options. It is to print print a summary of the DAG of jobs
 ```
+cd workflow
 snakemake -p -n
 ```
 #### 4. Execute workflow local
 Command for execution with two cores
 ```
+cd workflow
 snakemake -p -c2 -k
 ```
 
