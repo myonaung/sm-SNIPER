@@ -66,8 +66,8 @@ The usage of this workflow is described in the [Snakemake Workflow Catalog](http
 2. Clone/download this repository (e.g. git clone https://github.com/myonaung/sm-SNIPER.git)
 ## Configuration
 ### Sample annotation specifications
-* Sample (FastQ) files must be annotated with sample name, and thus (sample_name).fastq.
-* Based on the analyses, the following parameters in the **workflow/config/config.yaml file** and resource files in **workflow/resources/** are to be adjusted 
+#### Sample (FastQ) files must be annotated with sample name, and thus (sample_name).fastq.
+#### Based on the analyses, the following parameters in the **workflow/config/config.yaml file** and resource files in **workflow/resources/** are to be adjusted 
 
 1. reference - name of the target reference genome along with index .fai file from workflow/resources/ folder (e.g. resources/2. PlasmoDB-46_Pfalciparum3D7_Genome.fasta)
 2. bed - bed coordinate files for region of interest
