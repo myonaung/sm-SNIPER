@@ -66,7 +66,7 @@ The usage of this workflow is described in the [Snakemake Workflow Catalog](http
 2. Clone/download this repository (e.g. git clone https://github.com/myonaung/sm-SNIPER.git)
 ## Configuration
 ### Sample annotation specifications
-* Sample (FastQ) files must be annotated with sample name, and thus (sample_name).fastq.
+* Input (FastQ) files must be annotated with sample name, and thus (sample_name).fastq.
 * Based on the analyses, the following parameters in the **workflow/config/config.yaml file** and resource files in **workflow/resources/** are to be adjusted 
 
     * reference - name of the target reference genome along with index .fai file from workflow/resources/ folder (e.g. resources/2. PlasmoDB-46_Pfalciparum3D7_Genome.fasta)
@@ -89,6 +89,11 @@ Checking the pipeline with dry-run options. It is to print print a summary of th
 snakemake -p -n
 ```
 #### 3. Execute workflow local
+Command for execution with two cores
+```
+snakemake -p -c2 -k
+```
+
 #### 4. Execute workflow on a cluster
 
 ## Examples
