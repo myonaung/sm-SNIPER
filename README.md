@@ -52,7 +52,9 @@ The following software are required to install prior to running sm-SNIPER
 - Quality control: Read-depth and coverage calculation
 - Variant calling via longshot
 - Variant calling via PEPPER
-- 
+- Merging SVNs supported by both callers
+- Support Vector Machine
+- Final variant call
 
 ## Usage
 
