@@ -25,11 +25,27 @@ Table of contents
 - [Myo T. Naung](https://github.com/myonaung)
 
 ## Software
+This project is written based on the following software
+
+| Software       | Reference (DOI)                                   |
+| :------------: | :-----------------------------------------------: |
+| BCFtools       | https://doi.org/10.1093/gigascience/giab008       |
+| bedtools       | https://doi.org/10.1093/bioinformatics/btq033     |
+| GATK-4         | https://doi.org/10.1038/ng.806                    |
+| longshot       | https://doi.org/10.1038/s41467-019-12493-y        |
+| minimap2       | https://doi:10.1093/bioinformatics/btab705        |
+| pandas         | https://doi.org/10.5281/zenodo.3509134            |
+| PEPPER         | https://doi.org/10.5281/zenodo.5275510            |
+| R-tidyverse    | https://doi.org/10.21105/joss.01686               |
+| samtools       | https://doi.org/10.1093/bioinformatics/btp352     |
+| Snakemake      | https://doi.org/10.12688/f1000research.29032.2    |
+| VCFtools       | https://doi.org/10.1093/bioinformatics/btr330     |
+
 
 ## Dependencies 
-
-#### Conda
-#### Singularity >= 3.8.5
+The following software are required to install prior to running sm-SNIPER
+* Conda
+* Singularity >= 3.8.5
 
 ## Features
 
