@@ -5,6 +5,24 @@
 
 A Snakemake workflow for **Highly accurate Single Nucleotide polymorphisms calling and Implication of haplotypes in Probe-capture based long-Read Nanopore sequencing**
 
+Table of contents
+----------------
+  * [Authors](#authors)
+  * [Software](#software)
+  * [Methods](#dependencies)
+  * [Features](#features)
+  * [Usage](#usage)
+  * [Installation](#installation)
+  * [Configuration](#configuration)
+  * [Execution](#execution)
+  * [Examples](#examples)
+  * [Results](#results)
+  * [Tips & FAQs](#tips)
+
+
+
+## Authors
+- [Myo T. Naung](https://github.com/myonaung)
 
 ## Software
 
@@ -18,6 +36,8 @@ A Snakemake workflow for **Highly accurate Single Nucleotide polymorphisms calli
 ## Usage
 
 The usage of this workflow is described in the [Snakemake Workflow Catalog](https://snakemake.github.io/snakemake-workflow-catalog/?usage=<owner>%2F<repo>).
+
+## Installation
 
 ## Configuration
 
@@ -33,7 +53,6 @@ snakemake -p -n
 #### 3. Execute workflow local
 #### 4. Execute workflow on a cluster
 
-
+## Examples
 ## Results
-
 ## Tips
