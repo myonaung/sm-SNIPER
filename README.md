@@ -20,6 +20,7 @@ Table of contents
   * [Benchmarking](#benchmarking)
   * [Tips & FAQs](#tips)
   * [Contact](#contact)
+  * [Link](#link)
 
 
 
@@ -142,3 +143,6 @@ snakemake --dag --forceall | dot -Tsvg > workflow/dags/all_DAG.svg
 ```
 ## Contact
 Please create issue [here](https://github.com/myonaung/sm-SNIPER/issues/new) for any problem developed from using `sm-SNIPER`.
+
+## Link
+[Github page](https://myonaung.github.io/sm-SNIPER/)
