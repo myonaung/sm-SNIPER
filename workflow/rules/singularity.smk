@@ -7,7 +7,6 @@ rule PEPPER_prep:
     output:
         RG_bam="results/{SAMPLE}/out/{SAMPLE}_RG.bam",
         RG_bam_sorted="results/{SAMPLE}/out/{SAMPLE}_RG_sorted.bam"
-    cache: True
     shell:
         """
         gatk AddOrReplaceReadGroups -I {input.bam} -O {output.RG_bam} --RGID {SAMPLE}_cohort --RGLB {SAMPLE}_LSK109 --RGPL {SAMPLE}_nanopore --RGPU {SAMPLE}_probe --RGSM {SAMPLE}

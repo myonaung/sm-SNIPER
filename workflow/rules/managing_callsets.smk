@@ -45,7 +45,6 @@ rule tabular:
     output:
         longshot_table="results/{SAMPLE}/out/tabular/{SAMPLE}_longshot_amplicon.txt",
         PEPPER_table="results/{SAMPLE}/out/tabular/{SAMPLE}_PEPPER_amplicon.txt"
-    cache: True
     shell:
         """
         gatk VariantsToTable -V {input.longshot_amplicon} -F CHROM -F POS -F ID -F REF -F ALT -F QUAL -F AC -F AQ -F SC -F PH -GF GT -F DP -GF GQ -GF UQ -O {output.longshot_table}  --show-filtered
@@ -59,7 +58,6 @@ rule file_modify:
     output: 
         longshot_table_f="results/{SAMPLE}/out/text_file/{SAMPLE}_longshot.txt",
         PEPPER_table_f="results/{SAMPLE}/out/text_file/{SAMPLE}_PEPPER.txt"
-    cache: True
     shell:
         """
         scripts/longshot_tabular.sh {input.input_1} {SAMPLE} > {output.longshot_table_f}
