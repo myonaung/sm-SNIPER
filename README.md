@@ -32,7 +32,7 @@ Table of contents
 - [Myo T. Naung](https://github.com/myonaung)
 - [Andrew Guy](https://github.com/andrewguy)
 - [Swapnil Tichkule](https://github.com/Swap90)
-- Somesh Mehra
+- [Somesh Mehra](https://github.com/smehra34)
 
 ## Software
 This project is written based on the following software
