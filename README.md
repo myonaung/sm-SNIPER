@@ -142,7 +142,7 @@ snakemake -k -c8 --rerun-incomplete
 ```
 snakemake --dag --forceall | dot -Tsvg > workflow/dags/all_DAG.svg
 ```
-For the best results in haplotype phasing, we recommend to use [SHAPEIT4](https://odelaneau.github.io/shapeit4/#documentation) together with [WhatsHap tool](https://github.com/whatshap/whatshap) to extract phase information from our filtered bam file.
+- For the best results in haplotype phasing, we recommend to use [SHAPEIT4](https://odelaneau.github.io/shapeit4/#documentation) together with [WhatsHap tool](https://github.com/whatshap/whatshap) to extract phase information from our filtered bam file.
 
 ## Reporting Issue
 Please create issue [here](https://github.com/myonaung/sm-SNIPER/issues/new) for any problem developed from using `sm-SNIPER` or to request a new features.
