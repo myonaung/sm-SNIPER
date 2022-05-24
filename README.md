@@ -2,7 +2,7 @@
 
 ![Snakemake](https://img.shields.io/badge/snakemake-≥6.3.0-brightgreen.svg)
 
-![Header](./images/sm-SNIPER.png | width=100)
+![Header](./images/sm-SNIPER.png|width=100)
 A Snakemake workflow for **Highly accurate Single Nucleotide polymorphisms calling and Implication of haplotypes in Probe-capture based long-Read Nanopore sequencing** from raw FastQ to VCF
 
 Table of contents
