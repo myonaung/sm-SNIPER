@@ -3,7 +3,7 @@
 ![Snakemake](https://img.shields.io/badge/snakemake-≥6.3.0-brightgreen.svg)
 
 <p align="center">
-  <img src="./images/sm-SNIPER.png" width=25% height=25% >
+  <img src="./images/sm-SNIPER.png" width=40% height=40% >
 </p>
 
 
