@@ -19,7 +19,7 @@ Table of contents
   * [Results](#results)
   * [Benchmarking](#benchmarking)
   * [Tips & FAQs](#tips)
-  * [Contact](#contact)
+  * [Reporting Issue](#reportissue)
   * [Link](#link)
 
 
@@ -142,8 +142,8 @@ snakemake -k -c8 --rerun-incomplete
 ```
 snakemake --dag --forceall | dot -Tsvg > workflow/dags/all_DAG.svg
 ```
-## Contact
-Please create issue [here](https://github.com/myonaung/sm-SNIPER/issues/new) for any problem developed from using `sm-SNIPER`.
+## Reporting Issue
+Please create issue [here](https://github.com/myonaung/sm-SNIPER/issues/new) for any problem developed from using `sm-SNIPER` or to request a new features
 
 ## Link
 [Github page](https://myonaung.github.io/sm-SNIPER/)
