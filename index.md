@@ -2,6 +2,10 @@
 
 ![Snakemake](https://img.shields.io/badge/snakemake-≥6.3.0-brightgreen.svg)
 
+<p align="center">
+  <img src="./images/sm-SNIPER.png" width=40% height=40% >
+</p>
+
 
 A Snakemake workflow for **Highly accurate Single Nucleotide polymorphisms calling and Implication of haplotypes in Probe-capture based long-Read Nanopore sequencing** from raw FastQ to VCF
 
@@ -19,14 +23,16 @@ Table of contents
   * [Results](#results)
   * [Benchmarking](#benchmarking)
   * [Tips & FAQs](#tips)
-  * [Contact](#contact)
+  * [Reporting Issue](#reporting-issue)
+  * [Link](#link)
 
 
 
 ## Authors
 - [Myo T. Naung](https://github.com/myonaung)
 - [Andrew Guy](https://github.com/andrewguy)
--  Somesh Mehra
+- [Swapnil Tichkule](https://github.com/Swap90)
+- Somesh Mehra
 
 ## Software
 This project is written based on the following software
@@ -126,6 +132,9 @@ To ensure reproducibility of results and to make the pipeline easy-to-replicate,
 - [nanopore simulated FastQ](https://zenodo.org/deposit/6571220)
 
 ## Results  
+
+Haplotype phasing method used in `sm-SNIPER` was based on `longshot`, and thus haplotype switch error may still present in the cases where there are more than 2 infected strains in a single sample. Therefore, for the best results in haplotype phasing, we recommend to use [SHAPEIT4](https://odelaneau.github.io/shapeit4/#documentation) together with [WhatsHap tool](https://github.com/whatshap/whatshap) to extract phase information from our filtered bam file.
+
 ## Benchmarking
 ## Tips
 Here are some tips for troubleshooting & FAQs:
@@ -140,5 +149,9 @@ snakemake -k -c8 --rerun-incomplete
 ```
 snakemake --dag --forceall | dot -Tsvg > workflow/dags/all_DAG.svg
 ```
-## Contact
-Please create issue [here](https://github.com/myonaung/sm-SNIPER/issues/new) for any problem developed from using `sm-SNIPER`.
+
+## Reporting Issue
+Please create issue [here](https://github.com/myonaung/sm-SNIPER/issues/new) for any problem developed from using `sm-SNIPER` or to request a new features.
+
+## Link
+[Github page](https://myonaung.github.io/sm-SNIPER/)
