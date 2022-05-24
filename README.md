@@ -129,7 +129,7 @@ To ensure reproducibility of results and to make the pipeline easy-to-replicate,
 
 ## Results  
 
-Haplotype phasing method used in `sm-SNIPER` was based on `longshot`, and thus switch error may still present in the cases where there are more than 2 infected strains in a single sample. Therefore, for the best results in haplotype phasing, we recommend to use [SHAPEIT4](https://odelaneau.github.io/shapeit4/#documentation) together with [WhatsHap tool](https://github.com/whatshap/whatshap) to extract phase information from our filtered bam file.
+Haplotype phasing method used in `sm-SNIPER` was based on `longshot`, and thus haplotype switch error may still present in the cases where there are more than 2 infected strains in a single sample. Therefore, for the best results in haplotype phasing, we recommend to use [SHAPEIT4](https://odelaneau.github.io/shapeit4/#documentation) together with [WhatsHap tool](https://github.com/whatshap/whatshap) to extract phase information from our filtered bam file.
 
 ## Benchmarking
 ## Tips
