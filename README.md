@@ -128,6 +128,9 @@ To ensure reproducibility of results and to make the pipeline easy-to-replicate,
 - [nanopore simulated FastQ](https://zenodo.org/deposit/6571220)
 
 ## Results  
+
+Haplotype phasing method used in `sm-SNIPER` was based on `longshot`, and thus switch error may still present in the cases where there are more than 2 infected strains in a single sample. Therefore, for the best results in haplotype phasing, we recommend to use [SHAPEIT4](https://odelaneau.github.io/shapeit4/#documentation) together with [WhatsHap tool](https://github.com/whatshap/whatshap) to extract phase information from our filtered bam file.
+
 ## Benchmarking
 ## Tips
 Here are some tips for troubleshooting & FAQs:
@@ -142,7 +145,6 @@ snakemake -k -c8 --rerun-incomplete
 ```
 snakemake --dag --forceall | dot -Tsvg > workflow/dags/all_DAG.svg
 ```
-- For the best results in haplotype phasing, we recommend to use [SHAPEIT4](https://odelaneau.github.io/shapeit4/#documentation) together with [WhatsHap tool](https://github.com/whatshap/whatshap) to extract phase information from our filtered bam file.
 
 ## Reporting Issue
 Please create issue [here](https://github.com/myonaung/sm-SNIPER/issues/new) for any problem developed from using `sm-SNIPER` or to request a new features.
