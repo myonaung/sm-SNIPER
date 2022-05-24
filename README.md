@@ -19,7 +19,7 @@ Table of contents
   * [Results](#results)
   * [Benchmarking](#benchmarking)
   * [Tips & FAQs](#tips)
-  * [Reporting Issue](#reportissue)
+  * [Reporting Issue](#reportingissue)
   * [Link](#link)
 
 
