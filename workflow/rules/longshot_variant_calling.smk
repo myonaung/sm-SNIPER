@@ -14,6 +14,7 @@ rule longshot_calling:
         min_alt_frac=config["min_alt_frac"],
         max_c=config["max_coverage"]
     threads: workflow.cores * 0.75
+    cache: True
     shell:
         """
         longshot -S -b {input.bam} -f {input.REF} -o {output.longshot} -c {params.min_c} -F -E {params.min_alt_frac} -C {params.max_c} -I 3 --sample_id {SAMPLE}
