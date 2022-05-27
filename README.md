@@ -98,6 +98,7 @@ It is recommended to execute always from within top level of the pipeline direct
 
 ```
 ###envname can be replaced by any name
+git clone https://github.com/myonaung/sm-SNIPER.git
 conda env create --name envname --file=workflow/envs/default.yml
 conda activate envname
 ```
