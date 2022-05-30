@@ -69,7 +69,7 @@ The following software are required to install prior to running sm-SNIPER
 - Generation of only primary alignment BAM files
 
 <p align="center">
-  <img src="./images/sm-SNIPER.html" >
+  <img src="./images/sm-SNIPER.svg" >
 </p>
 
 <h4 align="center">Figure 1: Framework for variation discovery with sm-SNIPER.</h4>
