@@ -143,7 +143,7 @@ To ensure reproducibility of results and to make the pipeline easy-to-replicate,
 
 ## Benchmarking
 
-| #CHROM    | POS     |REF   | ALT   |FILTER|INFO             |           |
+| #CHROM    | POS     |REF   | ALT   |FILTER|INFO             | Genotype  |
 | :-------: | :-----: | :--: | :---: |:---: |:--------------: | :-------: |
 Pf3D7_11_v3 | 1294380 | T    | A     |PASS  | DP=111; AC=38,60|  GT  1 \|0|
 Pf3D7_11_v3 | 1294446 | A    | T     |PASS  | DP=120; AC=37,65|  GT  1 \|0|
