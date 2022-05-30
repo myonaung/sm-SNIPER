@@ -19,9 +19,9 @@ Table of contents
   * [Installation](#installation)
   * [Configuration](#configuration)
   * [Execution](#execution)
-  * [Examples](#examples)
-  * [Results](#results)
+  * [Examples Dataset](#examples-dataset)
   * [Benchmarking](#benchmarking)
+  * [Haplotype phasing](#Haplotype-phasing)
   * [Tips & FAQs](#tips)
   * [Reporting Issue](#reporting-issue)
   * [Link](#link)
@@ -136,16 +136,24 @@ snakemake -p -c2 -k
 #### 5a. Slurm system
 #### 5b. PBS system
 
-## Examples
+## Examples Dataset
 To ensure reproducibility of results and to make the pipeline easy-to-replicate, we provide all required reference data for the analysis on Zendodo: 
 - [nanopore amplicon-seq FastQ file from clinical samples](https://zenodo.org/deposit/6571220)
 - [nanopore simulated FastQ](https://zenodo.org/deposit/6571220)
 
-## Results  
+## Benchmarking
+
+| #CHROM    | POS     |REF   | ALT   |FILTER|INFO  |
+| :-------: | :-----: | :--: | :---: |:---: |:---: |
+Pf3D7_11_v3 | 1294380 | T    | A     |PASS  | DP=111; AC=38,60 GT 1|0
+Pf3D7_11_v3 | 1294446 | A    | T     |PASS  | DP=120; AC=37,65 GT 1|0
+Pf3D7_11_v3 | 1294995 | T    | A     |PASS  | DP=151; AC=46,82 GT 1|0
+Pf3D7_11_v3 | 1295430 | A    | T     |PASS  | DP=90; AC=30,54 GT 1|0
+
+## Haplotype phasing  
 
 Haplotype phasing method used in `sm-SNIPER` was based on `longshot`, and thus haplotype switch error may still present in the cases where there are more than 2 infected strains in a single sample. Therefore, for the best results in haplotype phasing, we recommend to use [SHAPEIT4](https://odelaneau.github.io/shapeit4/#documentation) together with [WhatsHap tool](https://github.com/whatshap/whatshap) to extract phase information from our filtered bam file.
 
-## Benchmarking
 ## Tips
 Here are some tips for troubleshooting & FAQs:
 - always first perform a dry-run with option `-n`
