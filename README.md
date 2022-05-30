@@ -56,7 +56,7 @@ This project is written based on the following software
 The following software are required to install prior to running sm-SNIPER
 * Conda
 * Singularity >= 3.8.5 
-* graphviz (optional)
+* [graphviz](https://graphviz.org/) (optional)
 
 ## Features
 - Mapping to the reference genome
