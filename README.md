@@ -145,10 +145,10 @@ To ensure reproducibility of results and to make the pipeline easy-to-replicate,
 
 | #CHROM    | POS     |REF   | ALT   |FILTER|INFO  |
 | :-------: | :-----: | :--: | :---: |:---: |:---: |
-Pf3D7_11_v3 | 1294380 | T    | A     |PASS  | DP=111; AC=38,60 GT 1|0
-Pf3D7_11_v3 | 1294446 | A    | T     |PASS  | DP=120; AC=37,65 GT 1|0
-Pf3D7_11_v3 | 1294995 | T    | A     |PASS  | DP=151; AC=46,82 GT 1|0
-Pf3D7_11_v3 | 1295430 | A    | T     |PASS  | DP=90; AC=30,54 GT 1|0
+Pf3D7_11_v3 | 1294380 | T    | A     |PASS  | DP=111; AC=38,60 GT 1"|"0
+Pf3D7_11_v3 | 1294446 | A    | T     |PASS  | DP=120; AC=37,65 GT 1"|"0
+Pf3D7_11_v3 | 1294995 | T    | A     |PASS  | DP=151; AC=46,82 GT 1"|"0
+Pf3D7_11_v3 | 1295430 | A    | T     |PASS  | DP=90; AC=30,54 GT 1"|"0
 
 ## Haplotype phasing  
 
