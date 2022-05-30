@@ -68,13 +68,20 @@ The following software are required to install prior to running sm-SNIPER
 - Final variant call
 - Generation of only primary alignment BAM files
 
+<p align="center">
+  <img src="./images/desription_sm-SNIPER.pdf" >
+</p>
+
+<h4 align="center">Figure 1: Framework for variation discovery with sm-SNIPER.</h4>
+
+
 ## Usage
 
 The usage of this workflow is described in the [Snakemake Workflow Catalog](https://snakemake.github.io/snakemake-workflow-catalog/?usage=<owner>%2F<repo>).
 
 ## Installation
 1. Install snakemake, which requires conda & mamba, according to the [documentation](https://snakemake.readthedocs.io/en/stable/getting_started/installation.html)
-2. Clone/download this repository (e.g. git clone https://github.com/myonaung/sm-SNIPER.git)
+2. Clone/download this repository (e.g. `git clone https://github.com/myonaung/sm-SNIPER.git`)
 ## Configuration
 ### Sample annotation specifications
 * `Input (FastQ)` files must be annotated with sample name, and thus `(sample_name).fastq`.
