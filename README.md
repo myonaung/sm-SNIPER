@@ -158,6 +158,14 @@ Pf3D7_11_v3 | 1295430 | A    | T     |PASS  | DP=90; AC=30,54 |  GT  1 \|0|
 
 Haplotype phasing method used in `sm-SNIPER` was based on `longshot` and [WhatsHap](https://github.com/whatshap/whatshap), and thus haplotype switch error may still present in the cases where there are more than 2 infected strains in a single sample. Therefore, for the best results in haplotype phasing, we recommend to use [SHAPEIT4](https://odelaneau.github.io/shapeit4/#documentation) which uses phase information from WhatsHap to extract phase information from our filtered bam file.
 
+To reconstruct the fasta files from a phased VCF, the `bcftools consensus` command can be used. 
+
+```
+bgzip phased.vcf
+tabix phased.vcf.gz
+bcftools consensus -H 1 -f reference.fasta phased.vcf.gz > haplotype1.fasta
+bcftools consensus -H 2 -f reference.fasta phased.vcf.gz > haplotype2.fasta
+```
 ## Tips
 Here are some tips for troubleshooting & FAQs:
 - always first perform a dry-run with option `-n`
