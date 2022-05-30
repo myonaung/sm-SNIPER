@@ -20,6 +20,7 @@ Table of contents
   * [Configuration](#configuration)
   * [Execution](#execution)
   * [Examples Dataset](#examples-dataset)
+  * [Result](#result)
   * [Benchmarking](#benchmarking)
   * [Haplotype phasing](#Haplotype-phasing)
   * [Tips & FAQs](#tips)
@@ -141,7 +142,7 @@ To ensure reproducibility of results and to make the pipeline easy-to-replicate,
 - [nanopore amplicon-seq FastQ file from clinical samples](https://zenodo.org/deposit/6571220)
 - [nanopore simulated FastQ](https://zenodo.org/deposit/6571220)
 
-## Benchmarking
+## Result
 
 | #CHROM    | POS     |REF   | ALT   |FILTER|INFO             | Genotype  |
 | :-------: | :-----: | :--: | :---: |:---: |:--------------: | :-------: |
@@ -149,6 +150,8 @@ Pf3D7_11_v3 | 1294380 | T    | A     |PASS  | DP=111; AC=38,60|  GT  1 \|0|
 Pf3D7_11_v3 | 1294446 | A    | T     |PASS  | DP=120; AC=37,65|  GT  1 \|0|
 Pf3D7_11_v3 | 1294995 | T    | A     |PASS  | DP=151; AC=46,82|  GT  1 \|0|
 Pf3D7_11_v3 | 1295430 | A    | T     |PASS  | DP=90; AC=30,54 |  GT  1 \|0|
+
+## Benchmarking
 
 ## Haplotype phasing  
 
