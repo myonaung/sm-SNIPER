@@ -51,6 +51,7 @@ This project is written based on the following software
 | samtools       | https://doi.org/10.1093/bioinformatics/btp352     |
 | Snakemake      | https://doi.org/10.12688/f1000research.29032.2    |
 | VCFtools       | https://doi.org/10.1093/bioinformatics/btr330     |
+| WhatsHap       | https://doi.org/10.1186/s13059-020-02158-1        |
 
 
 ## Dependencies 
