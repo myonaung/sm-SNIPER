@@ -187,5 +187,4 @@ Please create issue [here](https://github.com/myonaung/sm-SNIPER/issues/new) for
 [Github page](https://myonaung.github.io/sm-SNIPER/)
 
 
-<img src="https://giphy.com/embed/lQIo9t7pfVPEzDFory.gif" width="40" height="40" />
 
