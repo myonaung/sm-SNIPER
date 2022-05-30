@@ -55,7 +55,7 @@ This project is written based on the following software
 ## Dependencies 
 The following software are required to install prior to running sm-SNIPER
 * Conda
-* Singularity >= 3.8.5 
+* [Singularity](https://github.com/apptainer/singularity) >= 3.8.5 
 * [graphviz](https://graphviz.org/) (optional)
 
 ## Features
