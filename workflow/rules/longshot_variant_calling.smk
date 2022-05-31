@@ -3,12 +3,12 @@
 #########################################
 rule longshot_calling:
     input:
-        bam="config['results']/bam/{SAMPLE}.fastq_sorted.minimap2.bam",
+        bam="results/bam/{SAMPLE}.fastq_sorted.minimap2.bam",
         REF= config["reference"],
         BED= config["bed"]
     output:
-        longshot="config['results']/{SAMPLE}/out/{SAMPLE}.vcf",
-        longshot_amplicon="config['results']/{SAMPLE}/out/{SAMPLE}_amplicon.vcf"
+        longshot="results/{SAMPLE}/out/{SAMPLE}.vcf",
+        longshot_amplicon="results/{SAMPLE}/out/{SAMPLE}_amplicon.vcf"
     params:
         min_c=config["min_coverage"],
         min_alt_frac=config["min_alt_frac"],

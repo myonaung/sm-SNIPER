@@ -17,7 +17,7 @@ Table of contents
   * [Features](#features)
   * [Usage](#usage)
   * [Installation](#installation)
-  * [Configuration](#configuration)
+  * [Configuration](#resultsration)
   * [Execution](#execution)
   * [Examples Dataset](#examples-dataset)
   * [Result](#result)
@@ -175,7 +175,7 @@ Here are some tips for troubleshooting & FAQs:
 snakemake --unlock 
 snakemake -k -c8 --rerun-incomplete
 ```
-- command for generating the directed acyclic graph (DAG) of all jobs with current configuration (installation of [graphviz](https://graphviz.org/) will be required)
+- command for generating the directed acyclic graph (DAG) of all jobs with current resultsration (installation of [graphviz](https://graphviz.org/) will be required)
 ```
 snakemake --dag --forceall | dot -Tsvg > workflow/dags/all_DAG.svg
 ```
