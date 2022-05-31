@@ -145,6 +145,8 @@ To ensure reproducibility of results and to make the pipeline easy-to-replicate,
 
 ## Result
 
+The output can be found in the `sm-SNIPER/workflow/results`.
+
 | #CHROM    | POS     |REF   | ALT   |FILTER|INFO             | Genotype  |
 | :-------: | :-----: | :--: | :---: |:---: |:--------------: | :-------: |
 Pf3D7_11_v3 | 1294380 | T    | A     |PASS  | DP=111; AC=38,60|  GT  1 \|0|
