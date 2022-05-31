@@ -147,12 +147,12 @@ To ensure reproducibility of results and to make the pipeline easy-to-replicate,
 
 The output can be found in the `sm-SNIPER/workflow/results`.
 
-| #CHROM    | POS     |REF   | ALT   |FILTER|INFO             | Genotype  |
-| :-------: | :-----: | :--: | :---: |:---: |:--------------: | :-------: |
-Pf3D7_11_v3 | 1294380 | T    | A     |PASS  | DP=111; AC=38,60|  GT  1 \|0|
-Pf3D7_11_v3 | 1294446 | A    | T     |PASS  | DP=120; AC=37,65|  GT  1 \|0|
-Pf3D7_11_v3 | 1294995 | T    | A     |PASS  | DP=151; AC=46,82|  GT  1 \|0|
-Pf3D7_11_v3 | 1295430 | A    | T     |PASS  | DP=90; AC=30,54 |  GT  1 \|0|
+| #CHROM    | POS     |REF   | ALT   |FILTER|INFO             | Genotype (GT)  |
+| :-------: | :-----: | :--: | :---: |:---: |:--------------: | :---: |
+Pf3D7_11_v3 | 1294380 | T    | A     |PASS  | DP=111; AC=38,60|  1 \|0|
+Pf3D7_11_v3 | 1294446 | A    | T     |PASS  | DP=120; AC=37,65|  1 \|0|
+Pf3D7_11_v3 | 1294995 | T    | A     |PASS  | DP=151; AC=46,82|  1 \|0|
+Pf3D7_11_v3 | 1295430 | A    | T     |PASS  | DP=90; AC=30,54 |  1 \|0|
 
 ## Benchmarking
 
