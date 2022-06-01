@@ -147,8 +147,6 @@ snakemake -p -c2 -k
 snakemake --profile slurm/
 ```
 
-#### 6b. PBS system
-
 ## Examples Dataset
 To ensure reproducibility of results and to make the pipeline easy-to-replicate, we provide all required reference data for the analysis on Zendodo: 
 - [nanopore amplicon-seq FastQ file from clinical samples](https://zenodo.org/deposit/6571220)
