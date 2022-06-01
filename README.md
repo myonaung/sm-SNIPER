@@ -146,6 +146,10 @@ snakemake -p -c2 -k
 ```
 snakemake --profile slurm/
 ```
+<p align="center">
+  <img src="./images/example_slurm.png" width=60% height=60% >
+</p>
+
 
 ## Examples Dataset
 To ensure reproducibility of results and to make the pipeline easy-to-replicate, we provide all required reference data for the analysis on Zendodo: 
