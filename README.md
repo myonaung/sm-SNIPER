@@ -121,22 +121,29 @@ cd sm-SNIPER
 singularity pull docker://kishwars/pepper_deepvariant:r0.7
 mv pepper_deepvariant_r0.7.sif workflow/envs
 ```
-#### 3. Execute a dry-run
+#### 2. Build folder structure (will be replaced with a different feature soon)
+Relevent folders to run sm-SNIPER is created using `init.sh`. The path to data (i.e. fastq files) has to be added to the `init.sh` file.
+
+```
+sh init.sh
+```
+
+#### 4. Execute a dry-run
 Checking the pipeline with dry-run options. It is to print print a summary of the DAG of jobs
 ```
 cd workflow
 snakemake -p -n
 ```
-#### 4. Execute workflow local
+#### 5. Execute workflow local
 Command for execution with two cores
 ```
 cd workflow
 snakemake -p -c2 -k
 ```
 
-#### 5. Execute workflow on a cluster
-#### 5a. Slurm system
-#### 5b. PBS system
+#### 6. Execute workflow on a cluster
+#### 6a. Slurm system
+#### 6b. PBS system
 
 ## Examples Dataset
 To ensure reproducibility of results and to make the pipeline easy-to-replicate, we provide all required reference data for the analysis on Zendodo: 
