@@ -146,9 +146,9 @@ snakemake -p -c2 -k
 ```
 snakemake --profile slurm/
 ```
-
-<img src="./images/example_slurm.png" width="200"/ >
-
+<p align="center">
+  <img src="./images/example_slurm.png" width="200"/ >
+</p>
 
 
 ## Examples Dataset
