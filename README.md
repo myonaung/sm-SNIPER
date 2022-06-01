@@ -143,6 +143,10 @@ snakemake -p -c2 -k
 
 #### 6. Execute workflow on a cluster
 #### 6a. Slurm system
+```
+snakemake --profile simple/
+```
+
 #### 6b. PBS system
 
 ## Examples Dataset
