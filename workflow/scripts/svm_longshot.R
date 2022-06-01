@@ -55,6 +55,7 @@ pred <- function(OUT_FOLDER){
     sample_IDs <- gsub("_.*$", "", file)
     file <- read_txt_to_df(file)
     file_longshot <- file[file$ID == 'longshot',]
+    if(nrow(file_longshot) == 0) return(NULL)
     file_longshot  <- tibble::rownames_to_column(file_longshot, "number")
     file_longshot <- file_longshot[-c(1)]
     file_longshot  <- tibble::rownames_to_column(file_longshot, "index")

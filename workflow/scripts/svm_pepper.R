@@ -57,6 +57,7 @@ pred <- function(OUT_FOLDER){
     sample_IDs <- gsub("_.*$", "", file)
     file <- read_txt_to_df(file)
     file_pepper <- file[file$ID == 'PEPPER',]
+    if(nrow(file_pepper) == 0) return(NULL)
     file_pepper  <- tibble::rownames_to_column(file_pepper, "number")
     file_pepper <- file_pepper[-c(1)]
     file_pepper  <- tibble::rownames_to_column(file_pepper, "index")
