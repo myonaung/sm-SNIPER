@@ -147,7 +147,7 @@ snakemake -p -c2 -k
 snakemake --profile slurm/
 ```
 <p align="center">
-  <img src="./images/example_slurm.png" width=80% height=80%  >
+  <img src="./images/example_slurm.png" width=100% height=100%  >
 </p>
 
 
