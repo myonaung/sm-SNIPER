@@ -19,7 +19,8 @@ rule prep:
         mkdir -p results/{SAMPLE}/out/tabular
         mkdir -p results/PEPPER/{SAMPLE}
         mkdir -p results/{SAMPLE}/out/text_file
-        mkdir -p results/{output.unique_out_path}
+        #mkdir -p results/{output.unique_out_path}
+        mkdir -p results/{SAMPLE}/out/snps_to_evaluate
         mkdir -p results/{SAMPLE}/out/snps_to_evaluate/svm_train_data
         mkdir -p results/{SAMPLE}/out/final_vcf_SNIPER
         """
