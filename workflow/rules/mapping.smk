@@ -38,7 +38,7 @@ rule mapping_minimap2:
         bam="results/bam/{SAMPLE}_minimap2.bam",
         bam_sorted="results/bam/{SAMPLE}.fastq_sorted.minimap2.bam",
         filterd_bam="results/bam/{SAMPLE}_filtered.bam"
-    threads: workflow.cores * 0.75
+    #threads: workflow.cores * 0.75
     shell:
         """
         minimap2 -B 2 -t {threads} -m 20 -ax map-ont {input.REF} {input.FASTQ}/{SAMPLE}.fastq >  {output.out}
