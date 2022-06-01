@@ -15,6 +15,8 @@ for file in ${data}/*.fastq;do
         mkdir -p results/PEPPER/${sample}
         mkdir -p results/${sample}/out/text_file
         mkdir -p results/${sample}/out/snps_to_evaluate
+        mkdir -p results/${sample}/out/snps_to_evaluate/longshot_pass
+        mkdir -p results/${sample}/out/snps_to_evaluate/pepper_pass
         mkdir -p results/${sample}/out/snps_to_evaluate/svm_train_data
         mkdir -p results/${sample}/out/final_vcf_SNIPER
 done
