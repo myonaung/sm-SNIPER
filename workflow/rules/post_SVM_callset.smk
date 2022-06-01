@@ -8,8 +8,7 @@ rule post_SVM:
     output:
         longshot_pass_sites="results/{SAMPLE}/out/snps_to_evaluate/longshot_pass/{SAMPLE}_longshot_svm_pass_sites",
         pepper_pass_sites="results/{SAMPLE}/out/snps_to_evaluate/pepper_pass/{SAMPLE}_pepper_svm_pass_sites",
-    run:
-        if 
+    shell:
         """
         scripts/post_SVM.sh {input.longshot_pass} > {output.longshot_pass_sites}
         scripts/post_SVM.sh {input.pepper_pass} > {output.pepper_pass_sites}
