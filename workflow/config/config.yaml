@@ -6,3 +6,4 @@ min_coverage: 5
 max_coverage: 5000
 min_alt_frac: 0.01 #Require a potential SNV to have at least this fraction of alternate allele observations
 
+SAMPLES: config/samples.tsv

@@ -16,8 +16,10 @@ import pandas as pd
 configfile:
     "config/config.yaml"
 
-SAMPLE, = glob_wildcards(config['data']+"/{id}.fastq").id
 
+#SAMPLE, = glob_wildcards(config['data']+"/{id}.fastq").id
+
+SAMPLE, = glob_wildcards(config['data']+"/{SAMPLE}.fastq")
 
 
 #########################################
@@ -57,10 +59,12 @@ rule SNIPER:
 
 ##### Modules #####
 
+#include: "rules/common.smk"
 include: "rules/mapping.smk"
 include: "rules/QC.smk"
 include: "rules/longshot_variant_calling.smk"
 #include: "rules/singularity.smk"
 include: "rules/managing_callsets.smk"
 include: "rules/unique_snvs.smk"
-include: "rules/SVM_final_callset.smk"
+include: "rules/SVM.smk"
+include: "rules/post_SVM_callset.smk"
