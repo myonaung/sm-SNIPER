@@ -149,7 +149,7 @@ We can invoke snakemake with the profile to automatically submit to the cluster 
 snakemake --profile slurm/
 ```
 
-Parameters can be customised by editing to `config.yaml` file from `workflow/slurm` folder. Details customisation can be found at this (repository)[https://github.com/jdblischak/smk-simple-slurm].
+Parameters can be customised by editing to `config.yaml` file from `workflow/slurm` folder. Details customisation can be found at this [repository](https://github.com/jdblischak/smk-simple-slurm).
 
 ## Examples Dataset
 To ensure reproducibility of results and to make the pipeline easy-to-replicate, we provide all required reference data for the analysis on Zendodo: 
