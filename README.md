@@ -34,6 +34,7 @@ Table of contents
 - [Andrew Guy](https://github.com/andrewguy)
 - [Swapnil Tichkule](https://github.com/Swap90)
 - [Somesh Mehra](https://github.com/smehra34)
+- [Somya Mehra](https://github.com/somyamehra)
 
 ## Software
 This project is written based on the following software
