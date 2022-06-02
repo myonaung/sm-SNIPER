@@ -143,6 +143,8 @@ snakemake -p -c2 -k
 
 #### 6. Execute workflow on a cluster
 #### 6a. Slurm system
+
+We can invoke snakemake with the profile to automatically submit to the cluster with `sbatch` as follow:
 ```
 snakemake --profile slurm/
 ```
@@ -150,6 +152,7 @@ snakemake --profile slurm/
   <img src="./images/example_slurm.png" width=100% height=100%  >
 </p>
 
+Parameters can be customised by editing to `config.yaml` file from `workflow/slurm` folder. Details customisation can be found at this (repository)[https://github.com/jdblischak/smk-simple-slurm].
 
 ## Examples Dataset
 To ensure reproducibility of results and to make the pipeline easy-to-replicate, we provide all required reference data for the analysis on Zendodo: 
