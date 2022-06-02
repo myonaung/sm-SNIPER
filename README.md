@@ -148,9 +148,6 @@ We can invoke snakemake with the profile to automatically submit to the cluster 
 ```
 snakemake --profile slurm/
 ```
-<p align="center">
-  <img src="./images/example_slurm.png" width=100% height=100%  >
-</p>
 
 Parameters can be customised by editing to `config.yaml` file from `workflow/slurm` folder. Details customisation can be found at this (repository)[https://github.com/jdblischak/smk-simple-slurm].
 
