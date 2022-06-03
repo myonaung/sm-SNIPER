@@ -70,6 +70,7 @@ The following software are required to install prior to running sm-SNIPER
 - Classification of variants (SVNs) by Support Vector Machine based on in-house reference database (it is genereated by sequencing of reference strains using [STAR-seq protocol](https://www.protocols.io/private/ACE2C16BC17D11EC94CE0A58A9FEAC02))
 - Final variant call
 - Generation of only primary alignment BAM files
+- Haplotype calling with WhatsHap
 
 <p align="center">
   <img src="./images/sm-SNIPER.svg" >
