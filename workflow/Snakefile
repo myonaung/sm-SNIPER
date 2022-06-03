@@ -27,6 +27,7 @@ SAMPLE, = glob_wildcards(config['data']+"/{SAMPLE}.fastq")
 rule SNIPER:
     input:
         bam_sorted=expand("results/bam/{SAMPLE}.fastq_sorted.minimap2.bam",SAMPLE=SAMPLE),
+        filterd_bam_index=expand("results/bam/{SAMPLE}_filtered.bam.bai",SAMPLE=SAMPLE),
         total_depth=expand("results/{SAMPLE}/out/QC/{SAMPLE}_amplicon_total_depth.txt",SAMPLE=SAMPLE),
         amplicon_depth=expand("results/{SAMPLE}/out/QC/{SAMPLE}_amplicon_depth.txt",SAMPLE=SAMPLE),
         mapping_summary=expand("results/{SAMPLE}/out/QC/{SAMPLE}_mapping_summary.txt",SAMPLE=SAMPLE),
@@ -53,6 +54,8 @@ rule SNIPER:
         pepper_SVM_pass=expand("results/{SAMPLE}/out/{SAMPLE}_PEPPER_SVM_pass.vcf",SAMPLE=SAMPLE),
         pepper_to_longshot_index=expand("results/{SAMPLE}/out/{SAMPLE}_pepper_to_longshot.vcf.gz",SAMPLE=SAMPLE),
         final_variants=expand("results/{SAMPLE}/out/final_vcf_SNIPER/{SAMPLE}_final_SNIPER.vcf",SAMPLE=SAMPLE),
+        out_phase=expand("results/{SAMPLE}/out/final_vcf_SNIPER/{SAMPLE}_final_SNIPER_phased.vcf",SAMPLE=SAMPLE),
+
 
 
 ##### Modules #####
@@ -66,3 +69,4 @@ include: "rules/managing_callsets.smk"
 include: "rules/unique_snvs.smk"
 include: "rules/SVM.smk"
 include: "rules/post_SVM_callset.smk"
+include: "rules/whatshap.smk"
