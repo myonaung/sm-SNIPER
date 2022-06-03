@@ -27,6 +27,7 @@ SAMPLE, = glob_wildcards(config['data']+"/{SAMPLE}.fastq")
 rule SNIPER:
     input:
         bam_sorted=expand("results/bam/{SAMPLE}.fastq_sorted.minimap2.bam",SAMPLE=SAMPLE),
+        bam_sorted_index=expand("results/bam/{SAMPLE}.fastq_sorted.minimap2.bam.bai",SAMPLE=SAMPLE),
         filterd_bam_index=expand("results/bam/{SAMPLE}_filtered.bam.bai",SAMPLE=SAMPLE),
         total_depth=expand("results/{SAMPLE}/out/QC/{SAMPLE}_amplicon_total_depth.txt",SAMPLE=SAMPLE),
         amplicon_depth=expand("results/{SAMPLE}/out/QC/{SAMPLE}_amplicon_depth.txt",SAMPLE=SAMPLE),

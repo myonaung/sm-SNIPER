@@ -37,6 +37,7 @@ rule mapping_minimap2:
         out="results/bam/{SAMPLE}_minimap2.sam",
         bam="results/bam/{SAMPLE}_minimap2.bam",
         bam_sorted="results/bam/{SAMPLE}.fastq_sorted.minimap2.bam",
+        bam_sorted_index="results/bam/{SAMPLE}.fastq_sorted.minimap2.bam.bai",
         filterd_bam="results/bam/{SAMPLE}_filtered.bam",
         filterd_bam_index="results/bam/{SAMPLE}_filtered.bam.bai"
     #threads: workflow.cores * 0.75
