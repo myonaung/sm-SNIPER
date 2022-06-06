@@ -63,7 +63,7 @@ The following software are required to install prior to running sm-SNIPER
 
 ## Features
 - Mapping to the reference genome
-- Quality control: Read-depth and coverage calculation
+- Quality control: Read-depth and coverage calculation with samtools 
 - Variant calling with [longshot](https://github.com/pjedge/longshot)
 - Variant calling with [PEPPER](https://github.com/kishwarshafin/pepper) which is run on singularity container
 - Merging SVNs supported by both callers
