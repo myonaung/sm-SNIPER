@@ -155,8 +155,10 @@ Parameters can be customised by editing to `config.yaml` file from `workflow/slu
 
 ## Examples Dataset
 To ensure reproducibility of results and to make the pipeline easy-to-replicate, we provide all required reference data for the analysis on Zendodo: 
-- [nanopore amplicon-seq FastQ file from clinical samples (YIRA-266)](https://zenodo.org/deposit/6571220)
 - [nanopore simulated FastQ](https://zenodo.org/deposit/6571220)
+- [nanopore amplicon-seq FastQ file from 3D7 reference strain mock infection](https://zenodo.org/deposit/6571220)
+- [nanopore amplicon-seq FastQ file from clinical samples (YIRA-266)](https://zenodo.org/deposit/6571220)
+
 
 ## Result
 
@@ -171,8 +173,8 @@ Pf3D7_11_v3 | 1295430 | A    | T     |PASS  | DP=90; AC=30,54 |  1\|0|
 
 ## Benchmarking
 
-### Baseline error-rate
-### Comparison with freebayes and samtools 
+### 1. Baseline error-rate
+### 2. Comparison with freebayes and samtools 
 
 ## Haplotype phasing  
 
