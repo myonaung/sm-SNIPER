@@ -174,8 +174,9 @@ Pf3D7_11_v3 | 1295430 | A    | T     |PASS  | DP=90; AC=30,54 |  1\|0|
 ## Benchmarking
 
 ### 1. Baseline error-rate
+in progress
 ### 2. Comparison with freebayes and samtools 
-
+in progress
 ## Haplotype phasing  
 
 Haplotype phasing method used in `sm-SNIPER` was based on `longshot` and [WhatsHap](https://github.com/whatshap/whatshap), and thus haplotype switch error may still present in the cases where there are more than 2 infected strains in a single sample. Therefore, for the best results in haplotype phasing, we recommend to use [SHAPEIT4](https://odelaneau.github.io/shapeit4/#documentation) which uses phase information (*value of phase tag (PS) block*) from WhatsHap to extract phase information along with our filtered bam file. See [here](https://github.com/myonaung/Mapping-within-host-antigenic-escape) for example workflow of *Plasmodium falciparum*
