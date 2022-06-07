@@ -182,7 +182,7 @@ To quantify baseline error rates for sm-SNIPER in the context of [STAR-seq](http
 | Pf3D7_09_v3 | 1201812 | 1206974 | PF3D7_0930300	 | MSP1 |
 | Pf3D7_02_v3 | 273689 | 274507 | PF3D7_0206800 | MSP2 | 
 | Pf3D7_04_v3 | 1076347 | 1077534 | PF3D7_0423800 | CyRPA | 
-| Pf3D7_04_v3	 | 1082363 | 1084150 | PF3D7_0424100 | RH5 | 
+| Pf3D7_04_v3	| 1082363 | 1084150 | PF3D7_0424100 | RH5 | 
 
 
 ### 2. Comparison with freebayes and samtools 
