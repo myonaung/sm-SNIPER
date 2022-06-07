@@ -174,7 +174,11 @@ Pf3D7_11_v3 | 1295430 | A    | T     |PASS  | DP=90; AC=30,54 |  1\|0|
 ## Benchmarking
 
 ### 1. Baseline error-rate
-To quantify baseline error rates for sm-SNIPER in the context of [STAR-seq](https://www.protocols.io/private/ACE2C16BC17D11EC94CE0A58A9FEAC02), we compared probe-capture based 3D7 amplicons to the publicly available P. falciparum 3D7 reference genome (version 3). 
+To quantify baseline error rates for sm-SNIPER in the context of [STAR-seq](https://www.protocols.io/private/ACE2C16BC17D11EC94CE0A58A9FEAC02), we compared probe-capture based 3D7 amplicons to the publicly available *P. falciparum 3D7* reference genome (version 3). Benchmarking was done based on the following amplicons:
+
+| Chromosome| Start   |End   | Gene ID   | Gene Name     | 
+| :-------: | :-----: | :--: | :--------:|:------------: | 
+
 
 ### 2. Comparison with freebayes and samtools 
 in progress
