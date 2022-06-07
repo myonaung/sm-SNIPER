@@ -164,17 +164,8 @@ To ensure reproducibility of results and to make the pipeline easy-to-replicate,
 
 The output can be found in the `sm-SNIPER/workflow/results`.
 
-| #CHROM    | POS     |REF   | ALT   |FILTER|INFO             | Genotype (GT)  |
-| :-------: | :-----: | :--: | :---: |:---: |:--------------: | :---: |
-Pf3D7_11_v3 | 1294380 | T    | A     |PASS  | DP=111; AC=38,60|  1\|0|
-Pf3D7_11_v3 | 1294446 | A    | T     |PASS  | DP=120; AC=37,65|  1\|0|
-Pf3D7_11_v3 | 1294995 | T    | A     |PASS  | DP=151; AC=46,82|  1\|0|
-Pf3D7_11_v3 | 1295430 | A    | T     |PASS  | DP=90; AC=30,54 |  1\|0|
-
 ## Benchmarking
-
-### 1. Baseline error-rate
-To quantify baseline error rates for sm-SNIPER in the context of [STAR-seq](https://www.protocols.io/private/ACE2C16BC17D11EC94CE0A58A9FEAC02), we compared probe-capture based 3D7 amplicons to the publicly available *P. falciparum 3D7* reference genome (version 3). Benchmarking was done based on the following amplicons:
+Benchmarking was done based on the following amplicons which represent a wide variety of charactersitics such as presnce of tandem repeat (MSP2), and highly polymorphic marker (AMA1), and limited sequencing coverage (CyRPA)  etc.
 
 | Chromosome| Start   |End   | Gene ID   | Gene Name     | 
 | :-------: | :-----: | :--: | :--------:|:------------: | 
@@ -185,6 +176,9 @@ To quantify baseline error rates for sm-SNIPER in the context of [STAR-seq](http
 | Pf3D7_04_v3	| 1082363 | 1084150 | PF3D7_0424100 | RH5 | 
 | Pf3D7_03_v3	| 980706 | 983966 | PF3D7_0323400 | RIPR | 
 
+
+### 1. Baseline error-rate
+To quantify baseline error rates for sm-SNIPER in the context of [STAR-seq](https://www.protocols.io/private/ACE2C16BC17D11EC94CE0A58A9FEAC02), we compared probe-capture based 3D7 amplicons (above) to the publicly available *P. falciparum 3D7* reference genome (version 3). 
 
 
 
