@@ -20,7 +20,7 @@ rule PEPPER_calling:
         
     output:
         OUTPUT_VCF="results/PEPPER/{SAMPLE}/PEPPER_HP_VARIANT_FULL.vcf.gz"
-    threads: workflow.cores * 0.75
+    #threads: workflow.cores * 0.75
     params:
         flow_cell=config["ont_chemistry"]
     cache: True
