@@ -65,7 +65,7 @@ rule SNIPER:
 include: "rules/mapping.smk"
 include: "rules/QC.smk"
 include: "rules/longshot_variant_calling.smk"
-include: "rules/singularity.smk"
+#include: "rules/singularity.smk"
 include: "rules/managing_callsets.smk"
 include: "rules/unique_snvs.smk"
 include: "rules/SVM.smk"

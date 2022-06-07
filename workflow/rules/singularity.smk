@@ -1,7 +1,19 @@
 ########################################################
 ############ PEPPER called variants#####################
 #######################################################
-
+rule PEPPER_prep:
+    input:
+        bam="results/bam/{SAMPLE}.fastq_sorted.minimap2.bam",
+    output:
+        RG_bam="results/{SAMPLE}/out/{SAMPLE}_RG.bam",
+        RG_bam_sorted="results/{SAMPLE}/out/{SAMPLE}_RG_sorted.bam"
+    shell:
+        """
+        gatk AddOrReplaceReadGroups -I {input.bam} -O {output.RG_bam} --RGID {SAMPLE}_cohort --RGLB {SAMPLE}_LSK109 --RGPL {SAMPLE}_nanopore --RGPU {SAMPLE}_probe --RGSM {SAMPLE}
+        samtools sort -o {output.RG_bam_sorted} results/{SAMPLE}/out/{SAMPLE}_RG.bam
+        samtools index results/{SAMPLE}/out/{SAMPLE}_RG_sorted.bam
+        """
+        
 rule PEPPER_calling:
     input:
         bam="results/{SAMPLE}/out/{SAMPLE}_RG_sorted.bam",
