@@ -202,10 +202,7 @@ bcftools mpileup -d 3000 -Q 7 -Ou -I -f reference.fasta -R bed.bed bam.bam | bcf
 bcftools filter -sLowQual -e'%QUAL<20 & MQ < 10' out_raw.vcf >  out_filtered.vcf
 ```
 
-### 2. Comparing technical replicates of clinical samples
 
-
-in progress
 ## Haplotype phasing  
 
 Haplotype phasing method used in `sm-SNIPER` was based on `longshot` and [WhatsHap](https://github.com/whatshap/whatshap), and thus haplotype switch error may still present in the cases where there are more than 2 infected strains in a single sample. Therefore, for the best results in haplotype phasing, we recommend to use [SHAPEIT4](https://odelaneau.github.io/shapeit4/#documentation) which uses phase information (*value of phase tag (PS) block*) from WhatsHap to extract phase information along with our filtered bam file. See [here](https://github.com/myonaung/Mapping-within-host-antigenic-escape) for example workflow of *Plasmodium falciparum*
