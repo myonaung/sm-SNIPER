@@ -179,7 +179,7 @@ Benchmarking was done based on the following amplicons which represent a wide va
 
 
 ### 1. Baseline error-rate
-To quantify baseline error rates for sm-SNIPER in the context of [STAR-seq](https://www.protocols.io/private/ACE2C16BC17D11EC94CE0A58A9FEAC02), we compared probe-capture based 3D7 amplicons (above) to the publicly available *P. falciparum 3D7* reference genome (version 3). The performance of different variant calling methods are evaluated.
+To quantify baseline error rates for sm-SNIPER in the context of [STAR-seq](https://www.protocols.io/private/ACE2C16BC17D11EC94CE0A58A9FEAC02), we compared probe-capture based 3D7 mocked infection amplicons  to the publicly available *P. falciparum 3D7* reference genome (version 3). The performance of different variant calling methods are evaluated.
 
 |Method           | Cumulative length (base-pairs) |Number of expected SNVs| Number of observed SNVs   |False discovery rate (FDR) | Precision |
 |:---------------:| :--------------: | :-------------------: | :------------------------:|:----:| :--------:|
