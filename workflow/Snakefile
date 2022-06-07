@@ -34,8 +34,8 @@ rule SNIPER:
         mapping_summary=expand("results/{SAMPLE}/out/QC/{SAMPLE}_mapping_summary.txt",SAMPLE=SAMPLE),
         sample_mean_depth=expand("results/{SAMPLE}/out/QC/{SAMPLE}_mean_depth.txt",SAMPLE=SAMPLE),
         longshot_amplicon=expand("results/{SAMPLE}/out/{SAMPLE}_amplicon.vcf", SAMPLE=SAMPLE),
-        RG_bam_sorted=expand("results/{SAMPLE}/out/{SAMPLE}_RG_sorted.bam", SAMPLE=SAMPLE),
-        OUTPUT_VCF=expand("results/PEPPER/{SAMPLE}/PEPPER_VARIANT_FULL.vcf.gz", SAMPLE=SAMPLE),
+        #RG_bam_sorted=expand("results/{SAMPLE}/out/{SAMPLE}_RG_sorted.bam", SAMPLE=SAMPLE),
+        #OUTPUT_VCF=expand("results/PEPPER/{SAMPLE}/PEPPER_VARIANT_FULL.vcf.gz", SAMPLE=SAMPLE),
         PEPPER_amplicon=expand("results/{SAMPLE}/out/{SAMPLE}_PEPPER_VARIANT_FULL.vcf",SAMPLE=SAMPLE),
         confident_snv_index=expand("results/{SAMPLE}/out/confident_snv/{SAMPLE}_confident_snps.vcf.gz",SAMPLE=SAMPLE),
         longshot_table=expand("results/{SAMPLE}/out/tabular/{SAMPLE}_longshot_amplicon.txt",SAMPLE=SAMPLE),
@@ -65,7 +65,7 @@ rule SNIPER:
 include: "rules/mapping.smk"
 include: "rules/QC.smk"
 include: "rules/longshot_variant_calling.smk"
-include: "rules/singularity.smk"
+#include: "rules/singularity.smk"
 include: "rules/managing_callsets.smk"
 include: "rules/unique_snvs.smk"
 include: "rules/SVM.smk"

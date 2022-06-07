@@ -24,7 +24,6 @@ rule PEPPER_calling:
     params:
         flow_cell=config["ont_chemistry"]
     cache: True
-    priority: 80
     shell:
         """
         singularity exec --bind $PWD envs/pepper_deepvariant_r0.7.sif run_pepper_margin_deepvariant call_variant  --only_pepper -b "{input.bam}" -f "{input.REF}" -o "results/PEPPER/{SAMPLE}" -p "results/PEPPER/{SAMPLE}" -s "{SAMPLE}" -t {threads} --'{params.flow_cell}'

@@ -4,7 +4,6 @@ rule post_PEPPER:
     output:
         PEPPER_amplicon="results/{SAMPLE}/out/{SAMPLE}_PEPPER_VARIANT_FULL.vcf"
     cache: True
-    priority: 60
     shell:
         """
         intersectBed -a results/PEPPER/{SAMPLE}/PEPPER_VARIANT_FULL.vcf.gz -b {input.BED} -header > {output.PEPPER_amplicon}
@@ -22,7 +21,6 @@ rule confident_snvs:
         index_longshot_amplicon= "results/{SAMPLE}/out/{SAMPLE}_amplicon.vcf.gz",
         index_pepper_amplicon="results/{SAMPLE}/out/{SAMPLE}_PEPPER_VARIANT_FULL.vcf.gz",
         confident_snv_index="results/{SAMPLE}/out/confident_snv/{SAMPLE}_confident_snps.vcf.gz"
-    priority: 59
     shell:
         """
         bgzip -c {input.longshot_amplicon} > {output.index_longshot_amplicon}

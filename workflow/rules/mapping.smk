@@ -41,7 +41,6 @@ rule mapping_minimap2:
         filterd_bam="results/bam/{SAMPLE}_filtered.bam",
         filterd_bam_index="results/bam/{SAMPLE}_filtered.bam.bai"
     #threads: workflow.cores * 0.75
-    priority: 99
     shell:
         """
         minimap2 -B 2 -t {threads} -m 20 -ax map-ont {input.REF} {input.FASTQ}/{SAMPLE}.fastq >  {output.out}
