@@ -179,10 +179,13 @@ To quantify baseline error rates for sm-SNIPER in the context of [STAR-seq](http
 | Chromosome| Start   |End   | Gene ID   | Gene Name     | 
 | :-------: | :-----: | :--: | :--------:|:------------: | 
 | Pf3D7_11_v3 | 1293856 | 1295724 | PF3D7_1133400 | AMA1 | 
-| Pf3D7_09_v3 | 1201812 | 1206974 | PF3D7_0930300	 | MSP1 |
+| Pf3D7_01_v3 | 98819 | 102282 | PF3D7_0102200 | RESA | 
 | Pf3D7_02_v3 | 273689 | 274507 | PF3D7_0206800 | MSP2 | 
 | Pf3D7_04_v3 | 1076347 | 1077534 | PF3D7_0423800 | CyRPA | 
 | Pf3D7_04_v3	| 1082363 | 1084150 | PF3D7_0424100 | RH5 | 
+| Pf3D7_03_v3	| 980706 | 983966 | PF3D7_0323400 | RIPR | 
+
+
 
 
 ### 2. Comparison with freebayes and samtools 
