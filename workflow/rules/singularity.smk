@@ -28,6 +28,5 @@ rule PEPPER_calling:
     shell:
         """
         singularity exec --bind $PWD envs/pepper_deepvariant_r0.7.sif run_pepper_margin_deepvariant call_variant  --only_pepper -b "{input.bam}" -f "{input.REF}" -o "results/PEPPER/{SAMPLE}" -p "results/PEPPER/{SAMPLE}" -s "{SAMPLE}" -t {threads} --'{params.flow_cell}'
-        mv results/PEPPER/ama1-simulated/intermediate_files/PEPPER_VARIANT_FULL.vcf.gz* results/PEPPER/ama1-simulated/
         """
 
