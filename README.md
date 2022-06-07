@@ -43,6 +43,7 @@ This project is written based on the following software
 | :------------: | :-----------------------------------------------: |
 | BCFtools       | https://doi.org/10.1093/gigascience/giab008       |
 | bedtools       | https://doi.org/10.1093/bioinformatics/btq033     |
+| Freebayes      | https://doi.org/10.48550/arXiv.1207.3907          |
 | GATK-4         | https://doi.org/10.1038/ng.806                    |
 | longshot       | https://doi.org/10.1038/s41467-019-12493-y        |
 | minimap2       | https://doi:10.1093/bioinformatics/btab705        |
@@ -178,9 +179,20 @@ Benchmarking was done based on the following amplicons which represent a wide va
 
 
 ### 1. Baseline error-rate
-To quantify baseline error rates for sm-SNIPER in the context of [STAR-seq](https://www.protocols.io/private/ACE2C16BC17D11EC94CE0A58A9FEAC02), we compared probe-capture based 3D7 amplicons (above) to the publicly available *P. falciparum 3D7* reference genome (version 3). 
+To quantify baseline error rates for sm-SNIPER in the context of [STAR-seq](https://www.protocols.io/private/ACE2C16BC17D11EC94CE0A58A9FEAC02), we compared probe-capture based 3D7 amplicons (above) to the publicly available *P. falciparum 3D7* reference genome (version 3). The performance of different variant calling methods are evaluated.
 
+|Method   | Cumulative length (base-pairs) |Number of expected SNVs| Number of observed SNVs   |False discovery rate (FDR) | Precision |
+|:-------:| :--------------: | :-------------------: | :------------------------:|:----:| :--------:|
+|Freebayes v1.3.6 |     12383        |                       |                           |      |           |
+|BCFtools v1.15.1 |     12383        |                       |                           |      |           |
+|sm-SNIPER        |     12383        |                       |                           |      |           |
 
+Freebayes was run as follows:
+
+```
+```
+
+Freebayes was run as follows:
 
 ### 2. Comparison with freebayes and samtools 
 in progress
