@@ -201,6 +201,8 @@ bcftools mpileup -d 3000 -Q 7 -Ou -I -f reference.fasta -R bed.bed bam.bam | bcf
 bcftools filter -sLowQual -e'%QUAL<20 & MQ < 10' out_raw.vcf >  out_filtered.vcf
 ```
 
+### 2. Capacity to identify variants
+
 
 ## Haplotype phasing  
 
