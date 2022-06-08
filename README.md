@@ -164,28 +164,21 @@ To ensure reproducibility of results and to make the pipeline easy-to-replicate,
 The output can be found in the `sm-SNIPER/workflow/results`.
 
 ## Benchmarking
-Benchmarking was done based on the following amplicons which represent a wide variety of charactersitics such as presnce of tandem repeat (MSP2), and highly polymorphic marker (AMA1), and limited sequencing coverage (CyRPA)  etc.
-
-| Chromosome| Start   |End   | Gene ID   | Gene Name     | 
-| :-------: | :-----: | :--: | :--------:|:------------: | 
-| Pf3D7_01_v3 | 98819 | 102282 | PF3D7_0102200 | *resa* | 
-| Pf3D7_02_v3 | 273689 | 274507 | PF3D7_0206800 | *msp2* | 
-| Pf3D7_03_v3	| 980706 | 983966 | PF3D7_0323400 | *ripr* | 
-| Pf3D7_04_v3 | 1076347 | 1077534 | PF3D7_0423800 | *cyrpa* | 
-| Pf3D7_04_v3	| 1082363 | 1084150 | PF3D7_0424100 | *rh5*| 
-| Pf3D7_11_v3 | 1293856 | 1295724 | PF3D7_1133400 | *ama1* | 
+Benchmarking of the reference strain shown in the following example was done based on the amplicons from Naung *et al.,* 2023. Genomic coordinates of these can be found in the [bed file](https://github.com/myonaung/sm-SNIPER/blob/main/workflow/resources/myo_panel_bed.bed).
 
 ### 1. Baseline error-rate
-To quantify baseline error rates for sm-SNIPER in the context of [STAR-seq](https://www.protocols.io/private/ACE2C16BC17D11EC94CE0A58A9FEAC02), we mapped raw amplicon sequencing data from probe-capture based 3D7 mocked infection (*with high human dna background*) to the publicly available *P. falciparum 3D7* reference genome (version 3). The sequencing was done at around 250X coverage. The SNVs identification of sm-SNIPER with  popular variant calling methods are evaluated.
+To quantify baseline error rates for sm-SNIPER in the context of [STAR-seq](https://www.protocols.io/private/ACE2C16BC17D11EC94CE0A58A9FEAC02), we mapped raw amplicon sequencing data from probe-capture based 3D7 mocked infection (*with high human dna background*) to the publicly available *P. falciparum 3D7* reference genome (version 3). The sequencing was done an average of 250X coverage. The SNVs identification of sm-SNIPER with  popular variant calling methods are evaluated.
 
 <!--- (FDR = expected (# false predictions/ # total predictions)) ---> 
 <!--- Precision = TruePositives / (TruePositives + FalsePositives) ---> 
 
 |Method           |  length (bps) |No. expected SNVs|No. observed SNVs   |
 |:---------------:| :--------------: | :-------------------: | :------------------------:|
-|Freebayes v1.3.6 |     12383        |             0         |               8           |  
-|BCFtools v1.15.1 |     12383        |             0         |               2           |   
-|sm-SNIPER        |     12383        |             0         |               0           |  
+|Freebayes v1.3.6 |     140629       |             0         |              75           |  
+|BCFtools v1.15.1 |     140629       |             0         |              16           | 
+|PEPPER           |     140629       |             0         |               8           | 
+|Longshot         |     140629       |             0         |               1           | 
+|sm-SNIPER        |     140629       |             0         |               0           |  
 
 [Freebayes](https://github.com/freebayes/freebayes) was executed as follows:
 
