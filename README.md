@@ -194,6 +194,7 @@ freebayes -i -j -f reference.fasta -t bed.bed -p 2 -m 50 -q 20 --limit-coverage 
 bcftools mpileup -d 3000 -Q 7 -Ou -I -f reference.fasta -R bed.bed bam.bam | bcftools call -mv -Ov -o out_raw.vcf 
 bcftools filter -sLowQual -e'%QUAL<20 & MQ < 10' out_raw.vcf >  out_filtered.vcf
 ```
+Execution of longshot and PEPPER was similar to the ones used in sm-SNIPER.
 
 ### 2. Capacity to identify true variants
 
