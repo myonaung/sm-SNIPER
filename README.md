@@ -168,12 +168,12 @@ Benchmarking was done based on the following amplicons which represent a wide va
 
 | Chromosome| Start   |End   | Gene ID   | Gene Name     | 
 | :-------: | :-----: | :--: | :--------:|:------------: | 
-| Pf3D7_11_v3 | 1293856 | 1295724 | PF3D7_1133400 | AMA1 | 
-| Pf3D7_01_v3 | 98819 | 102282 | PF3D7_0102200 | RESA | 
-| Pf3D7_02_v3 | 273689 | 274507 | PF3D7_0206800 | MSP2 | 
-| Pf3D7_04_v3 | 1076347 | 1077534 | PF3D7_0423800 | CyRPA | 
-| Pf3D7_04_v3	| 1082363 | 1084150 | PF3D7_0424100 | RH5 | 
-| Pf3D7_03_v3	| 980706 | 983966 | PF3D7_0323400 | RIPR | 
+| Pf3D7_11_v3 | 1293856 | 1295724 | PF3D7_1133400 | *ama1* | 
+| Pf3D7_01_v3 | 98819 | 102282 | PF3D7_0102200 | *resa* | 
+| Pf3D7_02_v3 | 273689 | 274507 | PF3D7_0206800 | *msp2* | 
+| Pf3D7_04_v3 | 1076347 | 1077534 | PF3D7_0423800 | *cyrpa* | 
+| Pf3D7_04_v3	| 1082363 | 1084150 | PF3D7_0424100 | *rh5*| 
+| Pf3D7_03_v3	| 980706 | 983966 | PF3D7_0323400 | *ripr* | 
 
 
 ### 1. Baseline error-rate
