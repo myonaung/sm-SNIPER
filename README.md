@@ -157,7 +157,7 @@ Parameters can be customised by editing to `config.yaml` file from `workflow/slu
 ## Examples Dataset
 To ensure reproducibility of results and to make the pipeline easy-to-replicate, we provide all required reference data for the analysis on Zendodo: 
 - [nanopore simulated FastQ](https://zenodo.org/deposit/6571220)
-- [nanopore amplicon-seq FastQ file from 3D7 reference strain mock infection](https://zenodo.org/deposit/6571220)
+- [nanopore amplicon-seq FastQ file from 3D7 reference strain mock infection](https://zenodo.org/record/6571220#.YqAB6i2r3_S)
 
 ## Result
 
