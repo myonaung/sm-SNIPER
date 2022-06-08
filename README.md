@@ -168,13 +168,12 @@ Benchmarking was done based on the following amplicons which represent a wide va
 
 | Chromosome| Start   |End   | Gene ID   | Gene Name     | 
 | :-------: | :-----: | :--: | :--------:|:------------: | 
-| Pf3D7_11_v3 | 1293856 | 1295724 | PF3D7_1133400 | *ama1* | 
 | Pf3D7_01_v3 | 98819 | 102282 | PF3D7_0102200 | *resa* | 
 | Pf3D7_02_v3 | 273689 | 274507 | PF3D7_0206800 | *msp2* | 
+| Pf3D7_03_v3	| 980706 | 983966 | PF3D7_0323400 | *ripr* | 
 | Pf3D7_04_v3 | 1076347 | 1077534 | PF3D7_0423800 | *cyrpa* | 
 | Pf3D7_04_v3	| 1082363 | 1084150 | PF3D7_0424100 | *rh5*| 
-| Pf3D7_03_v3	| 980706 | 983966 | PF3D7_0323400 | *ripr* | 
-
+| Pf3D7_11_v3 | 1293856 | 1295724 | PF3D7_1133400 | *ama1* | 
 
 ### 1. Baseline error-rate
 To quantify baseline error rates for sm-SNIPER in the context of [STAR-seq](https://www.protocols.io/private/ACE2C16BC17D11EC94CE0A58A9FEAC02), we mapped raw amplicon sequencing data from probe-capture based 3D7 mocked infection (*with high human dna background*) to the publicly available *P. falciparum 3D7* reference genome (version 3). The sequencing was done at around 250X coverage. The SNVs identification of sm-SNIPER with  popular variant calling methods are evaluated.
