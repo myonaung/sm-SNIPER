@@ -177,17 +177,16 @@ Benchmarking was done based on the following amplicons which represent a wide va
 
 
 ### 1. Baseline error-rate
-To quantify baseline error rates for sm-SNIPER in the context of [STAR-seq](https://www.protocols.io/private/ACE2C16BC17D11EC94CE0A58A9FEAC02), we mapped raw amplicon sequencing data from probe-capture based 3D7 mocked infection (*with high human dna background*) to the publicly available *P. falciparum 3D7* reference genome (version 3). The performance of sm-SNIPER with  popular variant calling methods are evaluated.
+To quantify baseline error rates for sm-SNIPER in the context of [STAR-seq](https://www.protocols.io/private/ACE2C16BC17D11EC94CE0A58A9FEAC02), we mapped raw amplicon sequencing data from probe-capture based 3D7 mocked infection (*with high human dna background*) to the publicly available *P. falciparum 3D7* reference genome (version 3). The SNVs identification of sm-SNIPER with  popular variant calling methods are evaluated.
 
 <!--- (FDR = expected (# false predictions/ # total predictions)) ---> 
 <!--- Precision = TruePositives / (TruePositives + FalsePositives) ---> 
+
 |Method           |  length (bps) |No. expected SNVs|No. observed SNVs   |FDR | Precision |
 |:---------------:| :--------------: | :-------------------: | :------------------------:|:----:| :--------:|
-|Freebayes v1.3.6 |     12383        |             0         |                           |      |           |
-|BCFtools v1.15.1 |     12383        |             0         |                           |      |           |
-|PEPPER           |     12383        |             0         |                           |      |           |
-|Longshot v0.4.5  |     12383        |             0         |                           |      |           |
-|sm-SNIPER        |     12383        |             0         |               0           |   0  |     1     |
+|Freebayes v1.3.6 |     12383        |             0         |               8           |  0.001   |     0.99  |
+|BCFtools v1.15.1 |     12383        |             0         |                           |          |           |
+|sm-SNIPER        |     12383        |             0         |               0           |   0      |     1     |
 
 [Freebayes](https://github.com/freebayes/freebayes) was executed as follows:
 
