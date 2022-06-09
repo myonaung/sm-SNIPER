@@ -161,7 +161,7 @@ To ensure reproducibility of results and to make the pipeline easy-to-replicate,
 
 ## Result
 
-The output can be found in the `sm-SNIPER/workflow/results`.
+The final variant output can be found in the `sm-SNIPER/workflow/results/{SAMPLE}/out/final_vcf_SNIPE`.
 
 ## Benchmarking
 Benchmarking of the reference strain shown in the following example was done based on the amplicons from Naung *et al.,* 2023. Genomic coordinates of these can be found in the [bed file](https://github.com/myonaung/sm-SNIPER/blob/main/workflow/resources/myo_panel_bed.bed).
