@@ -166,7 +166,7 @@ The output can be found in the `sm-SNIPER/workflow/results`.
 ## Benchmarking
 Benchmarking of the reference strain shown in the following example was done based on the amplicons from Naung *et al.,* 2023. Genomic coordinates of these can be found in the [bed file](https://github.com/myonaung/sm-SNIPER/blob/main/workflow/resources/myo_panel_bed.bed).
 
-### 1. Baseline error or false discovery rate
+### 1. Baseline error or false discovery rate (FDR)
 To quantify baseline error rates for sm-SNIPER in the context of [STAR-seq](https://www.protocols.io/private/ACE2C16BC17D11EC94CE0A58A9FEAC02), we mapped raw amplicon sequencing data from probe-capture based 3D7 mocked infection (*with high human dna background*) to the publicly available *P. falciparum 3D7* reference genome (version 3). The sequencing was done an average of 250X coverage. The SNVs identification of sm-SNIPER with  popular variant calling methods are evaluated.
 
 <!--- (FDR = expected (# false predictions/ # total predictions)) ---> 
