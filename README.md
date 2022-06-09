@@ -63,7 +63,8 @@ The following software are required to install prior to running sm-SNIPER
 * [graphviz](https://graphviz.org/) (optional)
 
 ## Features
-- Mapping to the reference genome
+- minimap2
+* mapping to the reference genome
 - Quality control: Read-depth and coverage calculation with samtools 
 - Variant calling with [longshot](https://github.com/pjedge/longshot): Support only SNVs and restricted to high quality variants from high coverage regions (at least 10X)
 - Variant calling with [PEPPER](https://github.com/kishwarshafin/pepper) which is run on singularity container: Support SNVs and Indels including variants from low quality and low coverage regions
