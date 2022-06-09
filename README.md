@@ -63,16 +63,15 @@ The following software are required to install prior to running sm-SNIPER
 * [graphviz](https://graphviz.org/) (optional)
 
 ## Features
-- minimap2
-* mapping to the reference genome
-- Quality control: Read-depth and coverage calculation with samtools 
-- Variant calling with [longshot](https://github.com/pjedge/longshot): Support only SNVs and restricted to high quality variants from high coverage regions (at least 10X)
-- Variant calling with [PEPPER](https://github.com/kishwarshafin/pepper) which is run on singularity container: Support SNVs and Indels including variants from low quality and low coverage regions
-- Merging SVNs supported by both callers: highly confidents SNPs from high quality regions
-- Classification of variants (SVNs) by Support Vector Machine based on in-house reference database (it is genereated by sequencing of reference strains using [STAR-seq protocol](https://www.protocols.io/private/ACE2C16BC17D11EC94CE0A58A9FEAC02)): rescues variants that failed the first filter based on known database
-- Final variant call: final variant call 
-- Generation of only primary alignment BAM files: to use for haplotype phasing
-- Haplotype phasing with [WhatsHap](https://github.com/whatshap/whatshap): Haplotype phasing to final variant callset  
+- **minimap2**: mapping to the reference genome
+- **Quality control**: Read-depth and coverage calculation with samtools 
+- **Variant calling with [longshot](https://github.com/pjedge/longshot)**: Support only SNVs and restricted to high quality variants from high coverage regions (at least 10X)
+- **Variant calling with [PEPPER](https://github.com/kishwarshafin/pepper) which is run on singularity container**: Support SNVs and Indels including variants from low quality and low coverage regions
+- **Merging SVNs supported by both callers**: highly confidents SNPs from high quality regions
+- **Classification of variants (SVNs) by Support Vector Machine based on in-house reference database (it is genereated by sequencing of reference strains using [STAR-seq protocol](https://www.protocols.io/private/ACE2C16BC17D11EC94CE0A58A9FEAC02))**: rescues variants that failed the first filter based on known database
+- **Final variant call**: final variant call 
+- **Generation of only primary alignment BAM files**: to use for haplotype phasing
+- **Haplotype phasing with [WhatsHap](https://github.com/whatshap/whatshap)**: Haplotype phasing to final variant callset  
 
 <p align="center">
   <img src="./images/sm-SNIPER.svg" >
