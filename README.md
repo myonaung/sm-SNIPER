@@ -158,7 +158,7 @@ Parameters can be customised by editing to `config.yaml` file from `workflow/slu
 To ensure reproducibility of results and to make the pipeline easy-to-replicate, we provide all required reference data for the analysis on Zendodo: 
 - [nanopore simulated BAM](https://zenodo.org/deposit/6571220)
 - [nanopore amplicon-seq BAM file from 3D7 reference strain mock infection](https://zenodo.org/record/6622424#.YqA7-RNByu4)
-- [nanopore ama1 BAM file from synthetic mocked infection of 3D7 and BB12 mixture](https://zenodo.org/record/6630141#.YqLUKRNBzGI)
+- [nanopore ama1 BAM file from synthetic mocked infection of 3D7 and BB12 mixture](https://zenodo.org/record/6630467#.YqL1ehNBz_Q)
 
 ## Result
 
@@ -203,7 +203,7 @@ We used synthetic mocked infection of 3D7 and BB12 mixture to evaluate true vari
 |Minor clone prop  | Gene ID         | bps   |No. expected SNVs| No. detected true SNVs|No. detected false SNVs| FDR| Precision| Recall     | F1 score|
 | :--------------:| :--------------: | :---: |:---------------:| :------------------:  | :--------------------:|:--:|:--------:|:----------:|:-------:|
 | 0.33            |   PF3D7_1133400  |   1869|         32     |            31          |           0           | 0  |    1.00  |    0.97    |  0.98   |
-| less than 0.1   |   PF3D7_1133400  |   1869|         32     |            14          |           0           | 0  |    1.00  |    0.43    |  0.60   |
+| < 0.1           |   PF3D7_1133400  |   1869|         32     |            14          |           0           | 0  |    1.00  |    0.43    |  0.60   |
 
 
 ## Haplotype phasing  
