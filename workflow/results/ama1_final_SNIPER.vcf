@@ -1,0 +1,80 @@
+##fileformat=VCFv4.2									
+"##FILTER=<ID=PASS,Description=""All filters passed"">"									
+##source=Longshot v0.4.3									
+"##contig=<ID=Pf3D7_01_v3,length=640851>"									
+"##contig=<ID=Pf3D7_02_v3,length=947102>"									
+"##contig=<ID=Pf3D7_03_v3,length=1067971>"									
+"##contig=<ID=Pf3D7_04_v3,length=1200490>"									
+"##contig=<ID=Pf3D7_05_v3,length=1343557>"									
+"##contig=<ID=Pf3D7_06_v3,length=1418242>"									
+"##contig=<ID=Pf3D7_07_v3,length=1445207>"									
+"##contig=<ID=Pf3D7_08_v3,length=1472805>"									
+"##contig=<ID=Pf3D7_09_v3,length=1541735>"									
+"##contig=<ID=Pf3D7_10_v3,length=1687656>"									
+"##contig=<ID=Pf3D7_11_v3,length=2038340>"									
+"##contig=<ID=Pf3D7_12_v3,length=2271494>"									
+"##contig=<ID=Pf3D7_13_v3,length=2925236>"									
+"##contig=<ID=Pf3D7_14_v3,length=3291936>"									
+"##contig=<ID=Pf3D7_API_v3,length=34250>"									
+"##contig=<ID=Pf_M76611,length=5967>"									
+"##INFO=<ID=DP,Number=1,Type=Integer,Description=""Total Depth of reads passing MAPQ filter"">"									
+"##INFO=<ID=AC,Number=R,Type=Integer,Description=""Number of Observations of Each Allele"">"									
+"##INFO=<ID=AM,Number=1,Type=Integer,Description=""Number of Ambiguous Allele Observations"">"									
+"##INFO=<ID=MC,Number=1,Type=Integer,Description=""Minimum Error Correction (MEC) for this single variant"">"									
+"##INFO=<ID=MF,Number=1,Type=Float,Description=""Minimum Error Correction (MEC) Fraction for this variant."">"									
+"##INFO=<ID=MB,Number=1,Type=Float,Description=""Minimum Error Correction (MEC) Fraction for this variant's haplotype block."">"									
+"##INFO=<ID=AQ,Number=1,Type=Float,Description=""Mean Allele Quality value (PHRED-scaled)."">"									
+"##INFO=<ID=GM,Number=1,Type=Integer,Description=""Phased genotype matches unphased genotype (boolean)."">"									
+"##INFO=<ID=DA,Number=1,Type=Integer,Description=""Total Depth of reads at any MAPQ (but passing samtools filter 0xF00)."">"									
+"##INFO=<ID=MQ10,Number=1,Type=Float,Description=""Fraction of reads (passing 0xF00) with MAPQ>=10."">"									
+"##INFO=<ID=MQ20,Number=1,Type=Float,Description=""Fraction of reads (passing 0xF00) with MAPQ>=20."">"									
+"##INFO=<ID=MQ30,Number=1,Type=Float,Description=""Fraction of reads (passing 0xF00) with MAPQ>=30."">"									
+"##INFO=<ID=MQ40,Number=1,Type=Float,Description=""Fraction of reads (passing 0xF00) with MAPQ>=40."">"									
+"##INFO=<ID=MQ50,Number=1,Type=Float,Description=""Fraction of reads (passing 0xF00) with MAPQ>=50."">"									
+"##INFO=<ID=PH,Number=G,Type=Float,Description=""PHRED-scaled Probabilities of Phased Genotypes"">"									
+"##INFO=<ID=SC,Number=1,Type=String,Description=""Reference Sequence in 21-bp window around variant."">"									
+"##FILTER=<ID=dn,Description=""In a dense cluster of variants"">"									
+"##FILTER=<ID=dp,Description=""Exceeds maximum depth"">"									
+"##FILTER=<ID=sb,Description=""Allelic strand bias"">"									
+"##FORMAT=<ID=GT,Number=1,Type=String,Description=""Genotype"">"									
+"##FORMAT=<ID=GQ,Number=1,Type=Integer,Description=""Genotype Quality"">"									
+"##FORMAT=<ID=PS,Number=1,Type=Integer,Description=""Phase Set"">"									
+"##FORMAT=<ID=UG,Number=1,Type=String,Description=""Unphased Genotype (pre-haplotype-assembly)"">"									
+"##FORMAT=<ID=UQ,Number=1,Type=Float,Description=""Unphased Genotype Quality (pre-haplotype-assembly)"">"									
+"##FORMAT=<ID=DP,Number=1,Type=Integer,Description=""Read depth"">"									
+##bcftools_isecVersion=1.15.1+htslib-1.15.1									
+##bcftools_isecCommand=isec -c all -p results/BB12-3D7/out/confident_snv/BB12-3D7 -n=2 -w 1 results/BB12-3D7/out/BB12-3D7_amplicon.vcf.gz results/BB12-3D7/out/BB12-3D7_PEPPER_VARIANT_FULL.vcf.gz; Date=Fri Jun 10 13:24:50 2022									
+##bcftools_concatVersion=1.15.1+htslib-1.15.1									
+##bcftools_concatCommand=concat -a -o results/BB12-3D7/out/BB12-3D7_final_longshot.vcf results/BB12-3D7/out/BB12-3D7_longshot_SVM_pass.vcf.gz results/BB12-3D7/out/confident_snv/BB12-3D7_confident_snps.vcf.gz; Date=Fri Jun 10 13:27:34 2022									
+##bcftools_concatCommand=concat -a -o results/BB12-3D7/out/final_vcf_SNIPER/BB12-3D7_final_SNIPER.vcf results/BB12-3D7/out/BB12-3D7_final_longshot.vcf.gz results/BB12-3D7/out/BB12-3D7_pepper_to_longshot.vcf.gz; Date=Fri Jun 10 13:27:36 2022									
+Pf3D7_11_v3	1293957	.	T	A	377	dn	"DP=86;AC=46,25;AM=9;MC=0;MF=0;MB=0.022;AQ=12.16;GM=1;DA=86;MQ10=1;MQ20=1;MQ30=1;MQ40=1;MQ50=1;PH=376.31,-0,500,500;SC=CATATCAAAATAGTGATGTGT"	GT:GQ:DP:PS:UG:UQ	0|1:377:86:1293957:0/1:147.24
+Pf3D7_11_v3	1293971	.	G	A	500	dn	"DP=88;AC=49,35;AM=0;MC=0;MF=0;MB=0.022;AQ=19.67;GM=1;DA=88;MQ10=1;MQ20=1;MQ30=1;MQ40=1;MQ50=1;PH=500,-0,500,500;SC=GATGTGTATCGTCCAATCAAC"	GT:GQ:DP:PS:UG:UQ	0|1:500:88:1293957:0/1:147.24
+Pf3D7_11_v3	1294107	.	C	T	500	dn	"DP=175;AC=85,72;AM=8;MC=9;MF=0.056;MB=0.022;AQ=13.28;GM=1;DA=175;MQ10=1;MQ20=1;MQ30=1;MQ40=1;MQ50=1;PH=500,-0,500,500,500,500,500,500,500;SC=ACGAAGGTGCCGAACCCGCAC"	GT:GQ:DP:PS:UG:UQ	0|1:500:175:1293957:0/1:147.24
+Pf3D7_11_v3	1294355	.	C	A	500	dn	.	GT:GQ:DP:PS:UG:UQ	0|1:99:261:1293957:0/1:147.24
+Pf3D7_11_v3	1294378	.	T	G	500	dn	.	GT:GQ:DP:PS:UG:UQ	0|1:99:266:1293957:0/1:147.24
+Pf3D7_11_v3	1294414	.	G	A	500	dn	.	GT:GQ:DP:PS:UG:UQ	0|1:99:277:1293957:0/1:147.24
+Pf3D7_11_v3	1294416	.	A	T	500	dn	.	GT:GQ:DP:PS:UG:UQ	0|1:99:277:1293957:0/1:147.24
+Pf3D7_11_v3	1294425	.	G	A	500	dn	.	GT:GQ:DP:PS:UG:UQ	0|1:99:275:1293957:0/1:147.24
+Pf3D7_11_v3	1294441	.	G	A	500	dn	.	GT:GQ:DP:PS:UG:UQ	0|1:99:276:1293957:0/1:147.24
+Pf3D7_11_v3	1294445	.	A	G	500	dn	.	GT:GQ:DP:PS:UG:UQ	0|1:99:276:1293957:0/1:147.24
+Pf3D7_11_v3	1294446	.	A	T	500	dn	.	GT:GQ:DP:PS:UG:UQ	0|1:99:276:1293957:0/1:147.24
+Pf3D7_11_v3	1294453	.	C	G	500	dn	.	GT:GQ:DP:PS:UG:UQ	0|1:99:279:1293957:0/1:147.24
+Pf3D7_11_v3	1294465	.	G	A	500	dn	.	GT:GQ:DP:PS:UG:UQ	0|1:99:278:1293957:0/1:147.24
+Pf3D7_11_v3	1294471	.	A	G	500	dn	.	GT:GQ:DP:PS:UG:UQ	0|1:99:279:1293957:0/1:147.24
+Pf3D7_11_v3	1294529	.	T	A	500	dn	.	GT:GQ:DP:PS:UG:UQ	0|1:99:289:1293957:0/1:147.24
+Pf3D7_11_v3	1294579	.	G	T	500	dn	.	GT:GQ:DP:PS:UG:UQ	0|1:99:293:1293957:0/1:147.24
+Pf3D7_11_v3	1294584	.	A	T	500	dn	.	GT:GQ:DP:PS:UG:UQ	0|1:99:293:1293957:0/1:147.24
+Pf3D7_11_v3	1294654	.	G	C	500	dn	.	GT:GQ:DP:PS:UG:UQ	0|1:99:301:1293957:0/1:147.24
+Pf3D7_11_v3	1294700	.	T	A	500	dn	.	GT:GQ:DP:PS:UG:UQ	0|1:99:295:1293957:0/1:147.24
+Pf3D7_11_v3	1294703	.	C	T	500	dn	.	GT:GQ:DP:PS:UG:UQ	0|1:99:295:1293957:0/1:147.24
+Pf3D7_11_v3	1294708	.	C	G	500	dn	.	GT:GQ:DP:PS:UG:UQ	0|1:99:294:1293957:0/1:147.24
+Pf3D7_11_v3	1294731	.	G	A	500	dn	.	GT:GQ:DP:PS:UG:UQ	0|1:99:293:1293957:0/1:147.24
+Pf3D7_11_v3	1294753	.	A	G	500	dn	.	GT:GQ:DP:PS:UG:UQ	0|1:99:295:1293957:0/1:147.24
+Pf3D7_11_v3	1294777	.	C	G	500	dn	.	GT:GQ:DP:PS:UG:UQ	0|1:99:293:1293957:0/1:147.24
+Pf3D7_11_v3	1294843	.	C	T	500	dn	.	GT:GQ:DP:PS:UG:UQ	0|1:99:299:1293957:0/1:147.24
+Pf3D7_11_v3	1294850	.	T	A	500	dn	"DP=298;AC=175,106;AM=3;MC=12;MF=0.042;MB=0.022;AQ=15.45;GM=1;DA=298;MQ10=1;MQ20=1;MQ30=1;MQ40=1;MQ50=1;PH=500,-0,500,500,500,500,500,500,500;SC=TTTCCAGCAATTGATCTTTTT"	GT:GQ:DP:PS:UG:UQ	0|1:500:298:1293957:0/1:147.24
+Pf3D7_11_v3	1295066	.	C	G	500	dn	"DP=225;AC=140,69;AM=9;MC=5;MF=0.024;MB=0.022;AQ=13.26;GM=1;DA=225;MQ10=1;MQ20=1;MQ30=1;MQ40=1;MQ50=0.99;PH=500,-0,500,500,500,500,500,500,500;SC=AATTATAACACAGAAACACAA"	GT:GQ:DP:PS:UG:UQ	0|1:500:225:1293957:0/1:147.24
+Pf3D7_11_v3	1295170	.	A	C	500	PASS	.	GT:GQ:DP:PS:UG:UQ	0|1:99:290:1293957:0/1:147.24
+Pf3D7_11_v3	1295207	.	T	A	500	PASS	.	GT:GQ:DP:PS:UG:UQ	0|1:99:278:1293957:0/1:147.24
+Pf3D7_11_v3	1295605	.	G	C	320	PASS	.	GT:GQ:DP:PS:UG:UQ	0|1:99:181:1293957:0/1:147.24
+Pf3D7_11_v3	1295621	.	A	C	283	PASS	.	GT:GQ:DP:PS:UG:UQ	0|1:99:174:1293957:0/0:44.59

@@ -208,7 +208,9 @@ We used synthetic mocked infection of 3D7 and BB12 mixture to evaluate true vari
 
 ## Haplotype phasing  
 
-Haplotype phasing method used in `sm-SNIPER` was based on `longshot` and [WhatsHap](https://github.com/whatshap/whatshap), and thus haplotype switch error may still present in the cases where there are more than 2 infected strains in a single sample. Therefore, for the best results in haplotype phasing, we recommend to use [SHAPEIT4](https://odelaneau.github.io/shapeit4/#documentation) which uses phase information (*value of phase tag (PS) block*) from WhatsHap to extract phase information along with our filtered bam file. See [here](https://github.com/myonaung/Mapping-within-host-antigenic-escape) for example workflow of *Plasmodium falciparum*
+Haplotype phasing method used in `sm-SNIPER` was based on `longshot` and [WhatsHap](https://github.com/whatshap/whatshap), and thus haplotype switch error may still present in the cases where there are more than 2 infected strains in a single sample. Therefore, for the best results in haplotype phasing, we recommend to use [SHAPEIT4](https://odelaneau.github.io/shapeit4/#documentation) which uses phase information (*value of phase tag (PS) block*) from WhatsHap to extract phase information along with our filtered bam file. See [here](https://github.com/myonaung/Mapping-within-host-antigenic-escape) for example workflow of *Plasmodium falciparum*.
+
+See phased results on the example vcf files at [ama1_final_SNIPER.vcf](), where clear seperation of 0|1 is expected for all variants in genotype (GT)field.
 
 To reconstruct the fasta files from a phased VCF, the `bcftools consensus` command can be used. 
 
