@@ -197,6 +197,11 @@ bcftools filter -sLowQual -e'%QUAL<20 & MQ < 10' out_raw.vcf >  out_filtered.vcf
 *Execution of longshot and PEPPER was similar to the ones used in sm-SNIPER.*
 
 ### 2. Capacity to identify true variants
+We used synthetic mocked infection of 3D7 and BB12 mixture to evaluate true variant discovery with *sm-SNIPER*, and minor clone is BB12 strains comprising 33%. We used highly polymorphic and repeat-free *ama1* (PF3D7_1133400) sequenced at 200X coverage with STAR-seq as a benchmarking amplicon. 
+
+| Reference Gene ID| length|No. expected SNVs| No. detected true SNVs |No. detected false SNVs| FDR| Precision| Recall| F1 score|
+| :--------------: | :---: |:---------------: | :------------------:  | :--------------------:|:--:|:--------:|:----------:|:-------:|
+|   PF3D7_1133400  |   1869|         32     |            31           |           0           | 0  |    1.00  |    0.97    |  0.98   |
 
 
 ## Haplotype phasing  
