@@ -168,7 +168,10 @@ The final variant output can be found in the `sm-SNIPER/workflow/results/{SAMPLE
 ## Benchmarking
 Benchmarking of the reference strain shown in the following example was done based on the amplicons from Naung *et al.,* 2023. Genomic coordinates of these can be found in the [bed file](https://github.com/myonaung/sm-SNIPER/blob/main/workflow/resources/myo_panel_bed.bed).
 
-### 1. Baseline error or false discovery rate (FDR)
+### 1. Quality control
+
+
+### 2. Baseline error or false discovery rate (FDR)
 To quantify baseline error rates for sm-SNIPER in the context of [STAR-seq](https://www.protocols.io/private/ACE2C16BC17D11EC94CE0A58A9FEAC02), we mapped raw amplicon sequencing data from probe-capture based 3D7 mocked infection (*with high human dna background*) to the publicly available *P. falciparum 3D7* reference genome (version 3). The sequencing was done an average of 250X coverage. The SNVs identification of sm-SNIPER with  popular variant calling methods are evaluated.
 
 <!--- (FDR = expected (# false predictions/ # total predictions)) ---> 
@@ -197,16 +200,15 @@ bcftools filter -sLowQual -e'%QUAL<20 & MQ < 10' out_raw.vcf >  out_filtered.vcf
 ```
 *Execution of longshot and PEPPER was similar to the ones used in sm-SNIPER.*
 
-### 2. Capacity to identify true variants
+### 3. Capacity to identify true variants
 We used synthetic mocked infection of 3D7 and BB12 mixture to evaluate true variant discovery with *sm-SNIPER*, and minor clone is BB12 strains. We used highly polymorphic and repeat-free *ama1* (PF3D7_1133400) sequenced at 200X coverage with STAR-seq as a benchmarking amplicon. 
 
 |Minor clone prop  | Gene ID         | bps   |No. expected SNVs| No. detected true SNVs|No. detected false SNVs| FDR| Precision| Recall     | F1 score|
 | :--------------:| :--------------: | :---: |:---------------:| :------------------:  | :--------------------:|:--:|:--------:|:----------:|:-------:|
 | 0.33            |   PF3D7_1133400  |   1869|         32     |            31          |           0           | 0  |    1.00  |    0.97    |  0.98   |
-| < 0.1           |   PF3D7_1133400  |   1869|         32     |            14          |           0           | 0  |    1.00  |    0.43    |  0.60   |
+| less than 0.1           |   PF3D7_1133400  |   1869|         32     |            14          |           0           | 0  |    1.00  |    0.43    |  0.60   |
 
 
-### 3. Quality control
 
 ## Haplotype phasing  
 
