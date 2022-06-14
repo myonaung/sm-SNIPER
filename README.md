@@ -127,7 +127,7 @@ singularity pull docker://kishwars/pepper_deepvariant:r0.7
 mv pepper_deepvariant_r0.7.sif workflow/envs
 
 singularity pull docker://umigs/circleator:v1.0.2
-mv 
+mv circleator_v1.0.2.sif workflow/envs
 ```
 #### 3. Build folder structure (will be replaced with a different feature soon)
 Relevent folders to run sm-SNIPER is created using `init.sh`. The path to data (i.e. fastq files) has to be added to the `init.sh` file.
@@ -167,7 +167,7 @@ To ensure reproducibility of results and to make the pipeline easy-to-replicate,
 
 ## Result
 
-The final variant output can be found in the `sm-SNIPER/workflow/results/{SAMPLE}/out/final_vcf_SNIPE`.
+The final variant output can be found in the `sm-SNIPER/workflow/results/{SAMPLE}/out/final_vcf_SNIPER`.
 
 ## Benchmarking
 Benchmarking of the reference strain shown in the following example was done based on the amplicons from Naung *et al.,* 2023. Genomic coordinates of these can be found in the [bed file](https://github.com/myonaung/sm-SNIPER/blob/main/workflow/resources/myo_panel_bed.bed).
