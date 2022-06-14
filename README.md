@@ -211,14 +211,14 @@ bcftools filter -sLowQual -e'%QUAL<20 & MQ < 10' out_raw.vcf >  out_filtered.vcf
 ### 3. Capacity to identify true variants
 We used synthetic mocked infection of 3D7 and BB12 mixture to evaluate true variant discovery with *sm-SNIPER*, and minor clone is BB12 strains. We used highly polymorphic and repeat-free *ama1* (PF3D7_1133400) sequenced at 200X coverage with STAR-seq as a benchmarking amplicon. 
 
-|Minor clone prop  | Gene ID         | bps   |No. expected SNVs| No. detected true SNVs|No. detected false SNVs| FDR| Precision| Recall     | F1 score|
-| :--------------:| :--------------: | :---: |:---------------:| :------------------:  | :--------------------:|:--:|:--------:|:----------:|:-------:|
-| 0.33            |   PF3D7_1133400  |   1869|         32     |            31          |           0           | 0  |    1.00  |    0.97    |  0.98   |
-| < 0.1           |   PF3D7_1133400  |   1869|         32     |            14          |           0           | 0  |    1.00  |    0.43    |  0.60   |
+|Mocked infection|Minor clone prop  | Gene ID         | bps   |No. expected SNVs| No. detected true SNVs|No. detected false SNVs| FDR| Precision| Recall | F1 score|
+|:--------------:| :--------------:| :--------------: | :---: |:---------------:| :------------------:  | :--------------------:|:--:|:--------:|:------:|:-------:|
+|mixed-1| 0.33            |   PF3D7_1133400  |   1869|         32     |            31          |           0           | 0  |    1.00  |    0.97    |  0.98   |
+|mixed-2| < 0.1           |   PF3D7_1133400  |   1869|         32     |            14          |           0           | 0  |    1.00  |    0.43    |  0.60   |
 
 
 ### 4. Samples with lower coverage 
-To understand the extent of baseline error at lower coverage, we subsampled the alignments file (3D7 and BB12 mix) to 50X, 20X, 10X and 5X coverage using samtools as follows:
+To understand the extent of baseline error at lower coverage, we subsampled the alignments file (mixed-1) to 50X, 20X, 10X and 5X coverage using samtools as follows:
 
 ```
 ## downsample to 0.25 of original
