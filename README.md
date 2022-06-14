@@ -222,9 +222,7 @@ To understand the extent of baseline error at lower coverage, we subsampled the 
 
 ```
 ## downsample to 0.25 of original
-
 samtools view -s 0.25 -b sample.bam > sample_25p.sam
-
 ```
 
 |Coverage  | length (bps)   |No. expected SNVs| No. detected true SNVs|No. detected false SNVs| FDR| Precision| Recall     | F1 score|
