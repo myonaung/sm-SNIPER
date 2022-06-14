@@ -227,10 +227,7 @@ samtools view -s 0.25 -b sample.bam > sample_25p.sam
 
 |Coverage  | length (bps)   |No. expected SNVs| No. detected true SNVs|No. detected false SNVs| FDR| Precision| Recall     | F1 score|
 | :-------:| :----------- : | :------------ : |:---------------------:| :------------------:  |:--:|:--------:|:----------:|:-------:|
-| 50       |        140629  |         0       |                       |                       |    |          |            |         |
-| 20       |        140629  |         0       |                       |                       |    |          |            |         |
-| 10       |        140629  |         0       |                       |                       |    |          |            |         |
-| 5        |        140629  |         0       |                       |                       |    |          |            |         |
+
 
 
 ## Haplotype phasing  
