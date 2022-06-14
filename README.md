@@ -176,6 +176,12 @@ Benchmarking of the reference strain shown in the following example was done bas
 
 Information on read-depth and coverage can be found at `workflow/results/{SAMPLE}/out/QC`. 
 
+* _amplicon_depth.txt represents per base-pair sequenced read-depth.
+* _mapping_summary.txt represents mapping summary.
+* _amplicon_total_depth.txt represents average read-depth for each amplicon specified in bed file.
+* _mean_depth.txt represents mean read-depth of the amplicon panel.
+
+
 ### 2. Baseline error or false discovery rate (FDR)
 To quantify baseline error rates for sm-SNIPER in the context of [STAR-seq](https://www.protocols.io/private/ACE2C16BC17D11EC94CE0A58A9FEAC02), we mapped raw amplicon sequencing data from probe-capture based 3D7 mocked infection (*with high human dna background*) to the publicly available *P. falciparum 3D7* reference genome (version 3). The sequencing was done an average of 250X coverage. The SNVs identification of sm-SNIPER with  popular variant calling methods are evaluated.
 
