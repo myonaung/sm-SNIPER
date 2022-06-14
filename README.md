@@ -24,6 +24,7 @@ Table of contents
   * [Benchmarking](#benchmarking)
   * [Haplotype phasing](#Haplotype-phasing)
   * [Tips & FAQs](#tips)
+  * [Limitation](#limitation)
   * [Reporting Issue](#reporting-issue)
   * [Link](#link)
 
@@ -232,6 +233,10 @@ snakemake -k -c8 --rerun-incomplete
 ```
 snakemake --dag --forceall | dot -Tsvg > workflow/dags/all_DAG.svg
 ```
+
+## Limitation
+Our sm-SNIPER pipeline cannot perform indel discovery and SNV calling is restricted to MOI = 2.
+
 
 ## Reporting Issue
 Please create issue [here](https://github.com/myonaung/sm-SNIPER/issues/new) for any problem developed from using `sm-SNIPER` or to request a new features.
