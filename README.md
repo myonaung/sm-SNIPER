@@ -44,6 +44,7 @@ This project is written based on the following software
 | :------------: | :-----------------------------------------------: |
 | BCFtools       | https://doi.org/10.1093/gigascience/giab008       |
 | bedtools       | https://doi.org/10.1093/bioinformatics/btq033     |
+| Circleator     | https://doi.org/10.1093/bioinformatics/btu505     |
 | Freebayes      | https://doi.org/10.48550/arXiv.1207.3907          |
 | GATK-4         | https://doi.org/10.1038/ng.806                    |
 | longshot       | https://doi.org/10.1038/s41467-019-12493-y        |
@@ -124,6 +125,9 @@ Singularity image for PEPPER variant calling step has to be downloaded, and plac
 cd sm-SNIPER
 singularity pull docker://kishwars/pepper_deepvariant:r0.7
 mv pepper_deepvariant_r0.7.sif workflow/envs
+
+singularity pull docker://umigs/circleator:v1.0.2
+mv 
 ```
 #### 3. Build folder structure (will be replaced with a different feature soon)
 Relevent folders to run sm-SNIPER is created using `init.sh`. The path to data (i.e. fastq files) has to be added to the `init.sh` file.
@@ -170,6 +174,7 @@ Benchmarking of the reference strain shown in the following example was done bas
 
 ### 1. Quality control
 
+Information on read-depth and coverage can be found at `workflow/results/{SAMPLE}/out/QC`. 
 
 ### 2. Baseline error or false discovery rate (FDR)
 To quantify baseline error rates for sm-SNIPER in the context of [STAR-seq](https://www.protocols.io/private/ACE2C16BC17D11EC94CE0A58A9FEAC02), we mapped raw amplicon sequencing data from probe-capture based 3D7 mocked infection (*with high human dna background*) to the publicly available *P. falciparum 3D7* reference genome (version 3). The sequencing was done an average of 250X coverage. The SNVs identification of sm-SNIPER with  popular variant calling methods are evaluated.
@@ -206,7 +211,7 @@ We used synthetic mocked infection of 3D7 and BB12 mixture to evaluate true vari
 |Minor clone prop  | Gene ID         | bps   |No. expected SNVs| No. detected true SNVs|No. detected false SNVs| FDR| Precision| Recall     | F1 score|
 | :--------------:| :--------------: | :---: |:---------------:| :------------------:  | :--------------------:|:--:|:--------:|:----------:|:-------:|
 | 0.33            |   PF3D7_1133400  |   1869|         32     |            31          |           0           | 0  |    1.00  |    0.97    |  0.98   |
-| less than 0.1           |   PF3D7_1133400  |   1869|         32     |            14          |           0           | 0  |    1.00  |    0.43    |  0.60   |
+| < 0.1           |   PF3D7_1133400  |   1869|         32     |            14          |           0           | 0  |    1.00  |    0.43    |  0.60   |
 
 
 
