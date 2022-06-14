@@ -44,7 +44,6 @@ This project is written based on the following software
 | :------------: | :-----------------------------------------------: |
 | BCFtools       | https://doi.org/10.1093/gigascience/giab008       |
 | bedtools       | https://doi.org/10.1093/bioinformatics/btq033     |
-| Circleator     | https://doi.org/10.1093/bioinformatics/btu505     |
 | Freebayes      | https://doi.org/10.48550/arXiv.1207.3907          |
 | GATK-4         | https://doi.org/10.1038/ng.806                    |
 | longshot       | https://doi.org/10.1038/s41467-019-12493-y        |
@@ -125,10 +124,8 @@ Singularity image for PEPPER variant calling step has to be downloaded, and plac
 cd sm-SNIPER
 singularity pull docker://kishwars/pepper_deepvariant:r0.7
 mv pepper_deepvariant_r0.7.sif workflow/envs
-
-singularity pull docker://umigs/circleator:v1.0.2
-mv circleator_v1.0.2.sif workflow/envs
 ```
+
 #### 3. Build folder structure (will be replaced with a different feature soon)
 Relevent folders to run sm-SNIPER is created using `init.sh`. The path to data (i.e. fastq files) has to be added to the `init.sh` file.
 
