@@ -217,6 +217,23 @@ We used synthetic mocked infection of 3D7 and BB12 mixture to evaluate true vari
 | < 0.1           |   PF3D7_1133400  |   1869|         32     |            14          |           0           | 0  |    1.00  |    0.43    |  0.60   |
 
 
+### 4. Samples with lower coverage 
+To understand the extent of baseline error at lower coverage, we subsampled the alignments file (3D7 only) to 50X, 20X, 10X and 5X coverage using samtools as follows:
+
+```
+## downsample to 0.25 of original
+
+samtools view -s 0.25 -b sample.bam > sample_25p.sam
+
+```
+
+|Coverage  | length (bps)   |No. expected SNVs| No. detected true SNVs|No. detected false SNVs| FDR| Precision| Recall     | F1 score|
+| :-------:| :----------- : | :------------ : |:---------------------:| :------------------:  |:--:|:--------:|:----------:|:-------:|
+| 50       |        140629  |         0       |                       |                       |    |          |            |         |
+| 20       |        140629  |         0       |                       |                       |    |          |            |         |
+| 10       |        140629  |         0       |                       |                       |    |          |            |         |
+| 5        |        140629  |         0       |                       |                       |    |          |            |         |
+
 
 ## Haplotype phasing  
 
