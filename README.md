@@ -177,11 +177,10 @@ To quantify baseline error rates for sm-SNIPER in the context of [STAR-seq](http
 |:---------------:| :--------------: | :-------------------: | :------------------------:|
 |Freebayes v1.3.6 |     140629       |             0         |              75           |  
 |BCFtools v1.15.1 |     140629       |             0         |              16           | 
-|PEPPER*          |     140629       |             0         |               8           | 
-|Longshot*        |     140629       |             0         |               1           | 
-|sm-SNIPER*       |     140629       |             0         |               0           |  
+|PEPPER           |     140629       |             0         |               8           | 
+|Longshot         |     140629       |             0         |               1           | 
+|sm-SNIPER        |     140629       |             0         |               0           |  
 
-*removed low quality SNVs.
 
 [Freebayes](https://github.com/freebayes/freebayes) was executed as follows:
 
