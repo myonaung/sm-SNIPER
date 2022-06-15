@@ -195,7 +195,7 @@ To quantify baseline error rates for sm-SNIPER in the context of [STAR-seq](http
 |sm-SNIPER        |     50      | 140629      |             0   |               0    | 
 |sm-SNIPER        |     30      | 140629      |             0   |               0    |  
 |sm-SNIPER        |     15      | 140629      |             0   |               0    |  
-|sm-SNIPER        |      5      | 140629      |             0   |              15    |  
+|sm-SNIPER        |      5      | 140629      |             0   |              10    |  
 
 [Freebayes](https://github.com/freebayes/freebayes) was executed as follows:
 
