@@ -192,6 +192,7 @@ To quantify baseline error rates for sm-SNIPER in the context of [STAR-seq](http
 |PEPPER           |     250     | 140629      |             0   |               8    | 
 |Longshot         |     250     | 140629      |             0   |               1    | 
 |sm-SNIPER        |     250     | 140629      |             0   |               0    | 
+|sm-SNIPER        |     50      | 140629      |             0   |               0    | 
 |sm-SNIPER        |     30      | 140629      |             0   |               0    |  
 |sm-SNIPER        |     15      | 140629      |             0   |               0    |  
 |sm-SNIPER        |      5      | 140629      |             0   |              15    |  
@@ -227,11 +228,12 @@ To understand the extent of baseline error and SNV detection at lower coverage, 
 seqtk sample sample.fastq 10000 > subsample.fastq
 ```
 
-|Coverage  | Gene ID         | bps   |No. expected SNVs| No. detected true SNVs|No. detected false SNVs| FDR| Precision| Recall     | F1 score|
-| :--------------:| :--------------: | :---: |:---------------:| :------------------:  | :--------------------:|:--:|:--------:|:----------:|:-------:|
-|  30X            |   PF3D7_1133400  |   1869|         32      |           30          |             0         | 0  |   1      |  0.94      |   0.97     |
-|  15X            |   PF3D7_1133400  |   1869|         32      |           30          |             0         | 0  |   1      |  0.94      |   0.97     |
-|  5X             |   PF3D7_1133400  |   1869|         32      |           13          |             0         | 0  |   1      |  0.41      |   0.58     |
+|Coverage  | Gene ID         | bps   |No. expected SNVs| No. detected true SNVs|No. detected false SNVs|  Precision| Recall     | F1 score|
+| :--------------:| :--------------: | :---: |:---------------:| :------------------:  | :--------------------:|:--------:|:----------:|:-------:|
+|  50X            |   PF3D7_1133400  |   1869|         32      |           30          |             0         |    1      |  0.94      |   0.97     |
+|  30X            |   PF3D7_1133400  |   1869|         32      |           30          |             0         |    1      |  0.94      |   0.97     |
+|  15X            |   PF3D7_1133400  |   1869|         32      |           30          |             0         |    1      |  0.94      |   0.97     |
+|  5X             |   PF3D7_1133400  |   1869|         32      |           13          |             1         |    0.93   |  0.41      |   0.57     |
 
 
 
