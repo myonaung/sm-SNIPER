@@ -185,14 +185,16 @@ To quantify baseline error rates for sm-SNIPER in the context of [STAR-seq](http
 <!--- (FDR = expected (# false predictions/ # total predictions)) ---> 
 <!--- Precision = TruePositives / (TruePositives + FalsePositives) ---> 
 
-|Method           |  length (bps) |No. expected SNVs|No. observed SNVs   |
-|:---------------:| :--------------: | :-------------------: | :------------------------:|
-|Freebayes v1.3.6 |     140629       |             0         |              75           |  
-|BCFtools v1.15.1 |     140629       |             0         |              16           | 
-|PEPPER           |     140629       |             0         |               8           | 
-|Longshot         |     140629       |             0         |               1           | 
-|sm-SNIPER        |     140629       |             0         |               0           |  
-
+|Method           | coverage (X)|length (bps) |No. expected SNVs|No. observed SNVs   |
+|:---------------:| :----------:| :---------: | :-------------: | :-----------------:|
+|Freebayes v1.3.6 |     250     | 140629      |             0   |              75    |  
+|BCFtools v1.15.1 |     250     | 140629      |             0   |              16    | 
+|PEPPER           |     250     | 140629      |             0   |               8    | 
+|Longshot         |     250     | 140629      |             0   |               1    | 
+|sm-SNIPER        |     250     | 140629      |             0   |               0    | 
+|sm-SNIPER        |     30      | 140629      |             0   |               0    |  
+|sm-SNIPER        |     15      | 140629      |             0   |               0    |  
+|sm-SNIPER        |      5      | 140629      |             0   |              15    |  
 
 [Freebayes](https://github.com/freebayes/freebayes) was executed as follows:
 
