@@ -200,7 +200,7 @@ To quantify baseline error rates for sm-SNIPER in the context of [STAR-seq](http
 [Freebayes](https://github.com/freebayes/freebayes) was executed as follows:
 
 ```
-freebayes -i -j -f reference.fasta -t bed.bed -p 2 -m 50 -q 20 --limit-coverage 3000 --min-coverage 10 -C 10 --throw-away-indel-obs bam.bam > out.vcf
+freebayes -f reference.fasta -t bed.bed -p 2 -m 50 -q 20 --limit-coverage 3000 --min-coverage 10 -C 10 --throw-away-indel-obs bam.bam > out.vcf
 ```
 
 [BCFtools](http://samtools.github.io/bcftools/bcftools.html) was executed as follows:
