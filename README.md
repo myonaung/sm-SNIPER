@@ -32,8 +32,8 @@ Table of contents
 
 ## Authors
 - [Myo T. Naung](https://github.com/myonaung)
-- [Andrew Guy](https://github.com/andrewguy)
 - [Swapnil Tichkule](https://github.com/Swap90)
+- [Andrew Guy](https://github.com/andrewguy)
 - [Somesh Mehra](https://github.com/smehra34)
 - [Somya Mehra](https://github.com/somyamehra)
 
