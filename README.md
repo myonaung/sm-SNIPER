@@ -218,7 +218,7 @@ We used synthetic mocked infection of 3D7 and BB12 mixture to evaluate true vari
 
 
 ### 4. Samples with lower coverage 
-To understand the extent of baseline error and SNV detection at lower coverage, we subsampled the alignments file (mixed-1) to 30X, 15X, and 8X coverage using seqtk v1.3 as follows:
+To understand the extent of baseline error and SNV detection at lower coverage, we subsampled the alignments file (mixed-1) to 30X, 15X, and 5X coverage using seqtk v1.3 as follows:
 
 ```
 #subset 10000 reads from fastq
@@ -229,7 +229,7 @@ seqtk sample sample.fastq 10000 > subsample.fastq
 | :--------------:| :--------------: | :---: |:---------------:| :------------------:  | :--------------------:|:--:|:--------:|:----------:|:-------:|
 |  30X            |   PF3D7_1133400  |   1869|         32      |           30          |             0         | 0  |   1      |  0.94      |   0.97     |
 |  15X            |   PF3D7_1133400  |   1869|         32      |           30          |             0         | 0  |   1      |  0.94      |   0.97     |
-|  8X             |   PF3D7_1133400  |   1869|         32      |           13          |             0         | 0  |   1      |  0.41      |   0.58     |
+|  5X             |   PF3D7_1133400  |   1869|         32      |           13          |             0         | 0  |   1      |  0.41      |   0.58     |
 
 
 
