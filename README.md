@@ -227,7 +227,7 @@ seqtk sample sample.fastq 10000 > subsample.fastq
 
 |Coverage  | Gene ID         | bps   |No. expected SNVs| No. detected true SNVs|No. detected false SNVs| FDR| Precision| Recall     | F1 score|
 | :--------------:| :--------------: | :---: |:---------------:| :------------------:  | :--------------------:|:--:|:--------:|:----------:|:-------:|
-|  50X            |   PF3D7_1133400  |   1869|         32      |                       |                       |    |          |            |         |
+|  30X            |   PF3D7_1133400  |   1869|         32      |           30          |             0         | 0  |   1      |  0.94      |   0.97     |
 
 
 
