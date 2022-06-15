@@ -187,7 +187,7 @@ To quantify baseline error rates for sm-SNIPER in the context of [STAR-seq](http
 
 |Method           | coverage (X)|length (bps) |No. expected SNVs|No. observed SNVs   |
 |:---------------:| :----------:| :---------: | :-------------: | :-----------------:|
-|Freebayes v1.3.6 |     250     | 140629      |             0   |              25    |  
+|Freebayes v1.3.6 |     250     | 140629      |             0   |              75    |  
 |BCFtools v1.15.1 |     250     | 140629      |             0   |              16    | 
 |PEPPER           |     250     | 140629      |             0   |               8    | 
 |Longshot         |     250     | 140629      |             0   |               1    | 
