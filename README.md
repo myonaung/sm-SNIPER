@@ -6,6 +6,7 @@
   <img src="./images/sm-SNIPER.png" width=40% height=40% >
 </p>
 
+*Construction still in progress*
 
 A Snakemake workflow for **Highly accurate Single Nucleotide polymorphisms calling and Implication of haplotypes in Probe-capture based long-Read Nanopore sequencing** from raw FastQ to phased VCF. It is especially designed to process amplicon sequencing data for non-model organisms such as *Plasmodium* spp.
 
