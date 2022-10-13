@@ -75,7 +75,7 @@ The following software are required to install prior to running sm-SNIPER
 - **Generation of only primary alignment BAM files**: to use for haplotype phasing
 - **Haplotype phasing with [WhatsHap](https://github.com/whatshap/whatshap)**: Haplotype phasing to final variant callset  
 
-Note on in-house reference database: The data includes true and false variants from the targeted amplicon panel (detected by variant calling methods - longshot or PEPPER) for known reference strains (3D7 and BB12) at 100X coverage. Two clinical samples are also sequenced at 200X coverage and variants detected by each variant method are cross-checked with variants from [Naung et al., 2022](https://github.com/myonaung/Naung-et-al-2021), and concensus variants are assumed as true variants from clinical samples. These samples are not used in the following benchmarking to avoid overfitting.
+**Note on in-house reference database**: The data includes true and false variants from the targeted amplicon panel (detected by variant calling methods - longshot or PEPPER) for known reference strains (3D7 and BB12) at 100X coverage. Two clinical samples are also sequenced at 200X coverage and variants detected by each variant method are cross-checked with variants from [Naung et al., 2022](https://github.com/myonaung/Naung-et-al-2021), and concensus variants are assumed as true variants from clinical samples. These samples are not used in the following benchmarking to avoid overfitting.
 
 <p align="center">
   <img src="./images/sm-SNIPER.svg" >
